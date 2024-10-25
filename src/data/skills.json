@@ -1,0 +1,59 @@
+[
+    
+
+    {
+        "title": "Xcode",
+      "imageSrc": "skills/xcode.png"
+      
+    },
+    {
+        "title": "Swift",
+      "imageSrc": "skills/Swift.png"
+    },
+    {
+      "title": "SwiftUI",
+    "imageSrc": "skills/SwiftUI.png"
+  },
+    {
+      "title": "PostgreSQL",
+      "imageSrc": "skills/postgre.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "skills/react.png"
+    },
+    {
+      "title": "Html",
+      "imageSrc": "skills/html.png"
+    },
+    {
+      "title": "Css",
+      "imageSrc": "skills/css.png"
+    },
+    {
+      "title": "JavaScrip",
+      "imageSrc": "skills/javaScript.png"
+    },
+    {
+      "title": "Intelli J IDE",
+      "imageSrc": "skills/intell j.png"
+
+    },
+    {
+      "title": "Spring boot",
+      "imageSrc": "skills/spring.png"
+    },
+    {
+      "title": "GitHub",
+      "imageSrc": "skills/github.png"
+    },
+    {
+      "title": "Java",
+    "imageSrc": "skills/Java.png"
+  },
+  {
+    "title": "PHP",
+  "imageSrc": "skills/PHP.png"
+}
+
+  ]

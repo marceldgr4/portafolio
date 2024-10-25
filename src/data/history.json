@@ -1,0 +1,32 @@
+[
+    {
+      "role": "Ingeniero de Sistema",
+      "organisation": "Universidad del Magdalena",
+      "startDate": "febrero, 2018",
+      "endDate": "Presente",
+      "experiences": ["Creacion de una app para plataforma iOS en version demo para proyecto en clase."],
+      "imageSrc": "history/unimag.png"
+    },
+
+    {
+      "role": "Elaboracion de microservicio",
+      "organisation": "Universidad del Magdalena",
+      "startDate": "Feb, 2024",
+      "endDate": "Jun, 2024",
+      "experiences": [
+        "desarrollo de los elementos basico para la construcion de micro-sevirce.",
+        "Realices de pruebas de los micro-service."
+      ],
+      "imageSrc": "history/unimag.png"
+    },
+    {
+      "role": "UI/UX para sitio Web",
+      "organisation": "Universidad del Magdalena",
+      "startDate": "Aug, 2021",
+      "endDate": "Nov, 2021",
+      "experiences": ["Elaboracion de una sitio web con funcionalidad para un proyecto desarrollo de sitio web.",
+                      "Con base de datos"],
+      "imageSrc": "history/unimag.png"
+    }
+    
+  ]

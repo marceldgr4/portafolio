@@ -1,0 +1,29 @@
+[
+    {
+        "title":"proyecto 1",
+        "imageSrc":"skills/Trabajo5.png",
+        "description":"descripcion del proyecto",
+        "skills":["swiftUI", 
+        "PostgreSql", 
+        "Spring boot"],
+        "demo": "ruta del demo",
+        "source":"ruta del proyecto demo"
+    },
+    
+    {
+    "title":"proyecto 2",
+        "imageSrc":"skills/Trabajo3.png",
+        "description":"descripcion del proyecto",
+        "skills":["swiftUI","PostgreSql","Spring boot"],
+        "demo": "ruta del demo",
+        "source":"ruta del proyecto demo"
+    },
+    {
+        "title":"proyecto 3",
+        "imageSrc":"skills/Trabajo7.png",
+        "description":"descripcion del proyecto",
+        "skills":["swiftUI","PostgreSql","Spring boot"],
+        "demo": "ruta del demo",
+        "source":"ruta del proyecto demo"
+    }
+]
