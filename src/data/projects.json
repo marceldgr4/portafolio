@@ -1,11 +1,9 @@
 [
     {
-        "title":"proyecto 1",
+        "title":"proyecto iOS",
         "imageSrc":"skills/Trabajo5.png",
-        "description":"descripcion del proyecto",
-        "skills":["swiftUI", 
-        "PostgreSql", 
-        "Spring boot"],
+        "description":"descripcion del proyecto de una app de transporte para el comunidad de la ciudad de Santa Marta",
+        "skills":["swiftUI",  "PostgreSql", "Spring boot"],
         "demo": "ruta del demo",
         "source":"ruta del proyecto demo"
     },
