@@ -1,10 +1,10 @@
 [
     {
-        "title":"proyecto iOS",
+        "title":"Proyecto iOS",
         "imageSrc":"skills/Trabajo5.png",
         "description":"descripcion del proyecto de una app de transporte para el comunidad de la ciudad de Santa Marta",
         "skills":["swiftUI",  "PostgreSql", "Spring boot"],
-        "demo": "ruta del demo",
+        "demo": "/Transport",
         "source":"ruta del proyecto demo"
     },
     
@@ -13,7 +13,7 @@
         "imageSrc":"skills/Trabajo3.png",
         "description":"descripcion del proyecto",
         "skills":["swiftUI","PostgreSql","Spring boot"],
-        "demo": "ruta del demo",
+        "demo": "Ruta demo",
         "source":"ruta del proyecto demo"
     },
     {
