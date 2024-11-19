@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from "./ProjectCard.module.css";
 import { getImageUrl } from '../../utils';
+import { Link } from 'react-router-dom';
+
+
 
 export const ProjectCard = ( { project: { title, imageSrc, description, skills, demo, source},}) => {
   return (
-    <div className={styles.Container}>
+    <div className={styles.Container}id="">
         <img src={getImageUrl(imageSrc)}
          alt={`Image of ${title}`} className={styles.image}/>
                 <h3 className={styles.title}>{title}</h3>
@@ -15,7 +18,7 @@ export const ProjectCard = ( { project: { title, imageSrc, description, skills, 
                     })}
                 </ul>
                 <div className={styles.links}>
-                    <a href={demo} className={styles.link}>Demo</a>
+                    <Link to ={demo} className={styles.link}>View</Link>
                     <a href={source} className={styles.link} >Source</a>
          </div>
      </div>

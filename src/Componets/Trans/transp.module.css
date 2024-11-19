@@ -1,0 +1,93 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background-color: rgba(12, 12, 12, 0.6);
+    border-radius: 15px;
+    padding: 90px;
+    margin-top: 60px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Título principal */
+.title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+/* Contenedor de contenido */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Contenedor de cada imagen para asegurar que no se superpongan */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 220px;
+}
+
+/* Estilo de las imágenes de los iPhones */
+.img {
+    
+  width: 200%;
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+  margin-left: 10%;
+}
+
+.img:hover {
+  transform: scale(1.15);
+}
+
+/* Contenedor de texto */
+.textContainer {
+ position: relative;
+ margin-top: 15px;
+ margin-left: 6%;
+
+  padding: 35px;
+  text-align: left;
+  line-height: 1.6;
+  color: #ddd;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #f8b400; /* Color distintivo para subtítulos */
+}
+
+/* Texto descriptivo */
+.text {
+  font-size: 20px;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .imageContainer {
+    max-width: 150px;
+  }
+
+  .textContainer {
+    max-width: 50%;
+  }
+}
