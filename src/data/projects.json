@@ -9,12 +9,12 @@
     },
     
     {
-    "title":"proyecto 2",
+    "title":"Pokedex",
         "imageSrc":"skills/Trabajo3.png",
-        "description":"descripcion del proyecto",
-        "skills":["swiftUI","PostgreSql","Spring boot"],
-        "demo": "Ruta demo",
-        "source":"ruta del proyecto demo"
+        "description":"Es una aplicación web que permite explorar y visualizar Pokémon de manera interactiva. Los usuarios pueden buscar Pokémon, ver detalles individuales ",
+        "skills":["React + vite","Css"],
+        "demo": "https://pokedex-omega-sepia.vercel.app",
+        "source":"https://github.com/marceldgr4/Pokedex"
     },
     {
         "title":"proyecto 3",
