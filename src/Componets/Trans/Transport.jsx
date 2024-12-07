@@ -11,17 +11,14 @@ export const Transport=()=>{
        <section className={styles.container} id="Trans">
         <h1 className={styles.title}>APP TRANSPOTER DE SMR</h1>
         <div className={styles.content}>
-          <div className={styles.imageContainer}>
-            <img src={getImageUrl("Iphone/iphone1.png")} alt="iPhone 1" className={styles.img} />
-          </div>
-          <div className={styles.imageContainer}>
-            <img src={getImageUrl("Iphone/iphone2.png")} alt="iPhone 2" className={styles.img} />
-          </div>
-          <div className={styles.imageContainer}>
+        <div className={styles.imageContainer}>
             <img src={getImageUrl("Iphone/iphone3.png")} alt="iPhone 3" className={styles.img} />
           </div>
+          <div className={styles.imageContainer}>
+            <img src={getImageUrl("Iphone/iphone5.png")} alt="iPhone 5" className={styles.img} />
+          </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.subtitle}>TransApp</h2>
+            <h2 className={styles.subtitle}>Transpor SMR</h2>
             <p className={styles.text}>
               La app de transporte SMR para la ciudad de Santa Marta facilita a los usuarios el uso de buses locales,
               permitiéndoles planificar y optimizar sus viajes por la ciudad. La aplicación ofrece información en tiempo real

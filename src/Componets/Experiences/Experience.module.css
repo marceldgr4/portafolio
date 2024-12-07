@@ -3,12 +3,18 @@
 .container {
   position: relative;
   color: var(--color-text);
-  border-radius: 15px;
-  padding: 73px;
+  background-color: rgba(12, 12, 12, 0.236);
+  border-radius: 1rem;
+  padding: 3rem;
   margin-top: 129px;
+  z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
-  z-index: 1;
+  backdrop-filter: blur(10px); /* Efecto de difuminado */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.339);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+
 }
 
 .title {
@@ -59,6 +65,10 @@
 .skillImageContainer img {
   width: 80%;
   
+  transition: transform 0.3s ease; /* Transición suave */
+}
+.skillImageContainer img:hover {
+  transform: scale(1.2); /* Aumentar el tamaño en un 20% */
 }
 
 .skill p {
@@ -66,22 +76,24 @@
   font-family: var(--font-roboto);
   font-weight: 500;
 }
-.Arq h2{
+
+.Arq h2 {
   margin-top: 50px;
   color: var(--color-text);
   font-size: 60px;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
-
 }
-.Arq li{
+
+.Arq li {
   gap: 17px;
   background: #19376d;
   background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
   border-radius: 10px;
 }
-.Arq h3{
+
+.Arq h3 {
   display: flex;
   justify-items: center;
   color: var(--color-text);
@@ -90,13 +102,14 @@
   letter-spacing: 1.75px;
   margin-top: 20px;
   margin-left: 60px;
-
 }
-.Arq p{
+
+.Arq p {
   margin-left: 60px;
   color: var(--color-text);
   font-size: 20px;
 }
+
 .history {
   width: 45%;
   display: flex;
@@ -113,11 +126,13 @@
   background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
   border-radius: 10px;
   padding: 24px;
+  backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
 }
 
 .historyItem img {
   width: 50px;
-  transition: box-shadow 0.3s ease;
+  
 }
 
 .historyItem img:hover {
@@ -162,5 +177,12 @@
   .history {
     width: 100%;
     gap: 9px;
+  }
+
+  .container {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    backdrop-filter: blur(15px);
   }
 }

@@ -1,26 +1,34 @@
 [
     {
-        "title":"Proyecto iOS",
-        "imageSrc":"skills/Trabajo5.png",
-        "description":"descripcion del proyecto de una app de transporte para el comunidad de la ciudad de Santa Marta",
-        "skills":["swiftUI",  "PostgreSql", "Spring boot"],
+        "title":"Transpor SMR",
+        "imageSrc":"Iphone/iphone4.png",
+        "description":"Descripcion del proyecto: prototipo de una App para iOS del servicio de transporte publico para la ciudad de Santa Marta",
+        "skills":["swiftUI"],
         "demo": "/Transport",
         "source":"ruta del proyecto demo"
     },
     
     {
     "title":"Pokedex",
-        "imageSrc":"skills/Trabajo3.png",
-        "description":"Es una aplicación web que permite explorar y visualizar Pokémon de manera interactiva. Los usuarios pueden buscar Pokémon, ver detalles individuales ",
-        "skills":["React + vite","Css"],
+        "imageSrc":"about/about1.png",
+        "description":"Es una aplicación web que permite explorar y visualizar Pokémon de manera interactiva.  ",
+        "skills":["React + vite","Css","JavaScript"],
         "demo": "https://pokedex-omega-sepia.vercel.app",
         "source":"https://github.com/marceldgr4/Pokedex"
     },
     {
-        "title":"proyecto 3",
-        "imageSrc":"skills/Trabajo7.png",
-        "description":"descripcion del proyecto",
-        "skills":["swiftUI","PostgreSql","Spring boot"],
+        "title":"BarberShop",
+        "imageSrc":"about/about3.png",
+        "description":"descripcion del proyecto: prototipo de una App para iOS, para realziar agendamineto de cita para los servicio que ofrece la barber. por el momento esta en desarrollo y mejoras",
+        "skills":["swiftUI"],
+        "demo": "ruta del demo",
+        "source":"ruta del proyecto demo"
+    },
+    {
+        "title":"Proyecto pagina web de Hackinthos ",
+        "imageSrc":"about/about5.png",
+        "description":"descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la naveagcion para le usuario con inform ",
+        "skills":["React","Css","JavaScript"],
         "demo": "ruta del demo",
         "source":"ruta del proyecto demo"
     }
