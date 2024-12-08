@@ -18,7 +18,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Router future={{ v7_startTransition: true }}>
+    <Router>
       <div className={styles.App}>
         <Navbar />
         <Routes>
