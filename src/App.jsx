@@ -5,7 +5,10 @@ import{Contact} from "./Componets/Contact/Contact";
 import {Studio} from "./Componets/Studio/Studio";
 import {Experience} from "./Componets/Experiences/Experience";
 import{Projects} from "./Componets/Projects/Projects";
-import { Transport } from "./Componets/Trans/Transport";
+
+import {Transport} from "./Componets/Trans/Transport";
+import { Perdida } from './Componets/PagError/perdida';
+
 
 import {Hero} from "./Componets/Hero/Hero";
 import {Navbar} from "./Componets/Navbar/Navbar";
@@ -15,7 +18,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true }}>
       <div className={styles.App}>
         <Navbar />
         <Routes>
@@ -31,6 +34,10 @@ function App() {
             </>
           } />
           <Route path="/Transport" element={<Transport/>}/>
+          <Route path="/Perdida" element={<Perdida/>}/>
+          
+
+          
          
         </Routes>
       </div>

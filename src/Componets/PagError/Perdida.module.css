@@ -1,0 +1,61 @@
+@import "../../vars.css";
+
+.container {
+    display: flex;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Para centrar verticalmente */
+    
+    background-color: var(--background-color);
+}
+.content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+}
+.imgContainer {
+  flex: 1;
+   /* Ajusta el tamaño máximo de la imagen */
+}
+.img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 350px;
+  
+}
+
+  .title {
+    font-size: 150px;
+    color: var(--error-color, #ff0000); /* Color de texto del error */
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #929ca5;
+    margin: 20px 0 20px;
+  }
+ 
+  .button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none; /* Esto asegura que no parezca un enlace */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+  
