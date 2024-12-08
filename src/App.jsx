@@ -7,7 +7,7 @@ import {Experience} from "./Componets/Experiences/Experience";
 import{Projects} from "./Componets/Projects/Projects";
 
 import {Transport} from "./Componets/Trans/Transport";
-import { Perdida } from './Componets/PagError/perdida';
+import {Perdida} from './Componets/PagError/perdida';
 
 
 import {Hero} from "./Componets/Hero/Hero";
