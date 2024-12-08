@@ -7,7 +7,7 @@ import {Experience} from "./Componets/Experiences/Experience";
 import{Projects} from "./Componets/Projects/Projects";
 
 import {Transport} from "./Componets/Trans/Transport";
-import {Perdida} from './Componets/PagError/perdida';
+import{PagError} from "./Componets/PagError/PagError"
 
 
 import {Hero} from "./Componets/Hero/Hero";
@@ -34,7 +34,7 @@ function App() {
             </>
           } />
           <Route path="/Transport" element={<Transport/>}/>
-          <Route path="/Perdida" element={<Perdida/>}/>
+          <Route path="/PagError" element={<PagError/>}/>
           
 
           

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getImageUrl } from "../../utils";
 import styles from "./Perdida.module.css";
 
-export const Perdida = () => {
+export const PagError = () => {
     const navigate = useNavigate();
 
     const handleGoToProjects = () => {
@@ -12,7 +12,7 @@ export const Perdida = () => {
 
     return (
         <div>
-            <section className={styles.container} id="Perdida">
+            <section className={styles.container} id="PagError">
                 <div className={styles.content}>
                     {/* Imagen al lado izquierdo */}
                     <div className={styles.imgContainer}>

@@ -21,7 +21,7 @@
         "imageSrc":"about/about3.png",
         "description":"descripcion del proyecto: prototipo de una App para iOS, para realziar agendamineto de cita para los servicio que ofrece la barber. por el momento esta en desarrollo y mejoras",
         "skills":["swiftUI"],
-        "demo": "/Perdida",
+        "demo": "/PagError",
         "source":"ruta del proyecto demo"
     },
     {
@@ -29,7 +29,7 @@
         "imageSrc":"about/about5.png",
         "description":"descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la naveagcion para le usuario con inform ",
         "skills":["React","Css","JavaScript"],
-        "demo": "/Perdida",
+        "demo": "/PagError",
         "source":"ruta del proyecto demo"
     }
 ]
