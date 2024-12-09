@@ -18,8 +18,8 @@
     },
     {
         "title":"BarberShop",
-        "imageSrc":"about/about3.png",
-        "description":"descripcion del proyecto: prototipo de una App para iOS, para realziar agendamineto de cita para los servicio que ofrece la barber. por el momento esta en desarrollo y mejoras",
+        "imageSrc":"Iphone/iphone6.png",
+        "description":"Descripcion del proyecto: prototipo de una App para iOS, para realziar agendamineto de cita para los servicio que ofrece la barber. por el momento esta en desarrollo y mejoras",
         "skills":["swiftUI"],
         "demo": "/PagError",
         "source":"ruta del proyecto demo"
@@ -27,7 +27,7 @@
     {
         "title":"Proyecto pagina web de Hackinthos ",
         "imageSrc":"about/about5.png",
-        "description":"descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la naveagcion para le usuario con inform ",
+        "description":"Descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la navegacion para le usuario con informarcion necesario",
         "skills":["React","Css","JavaScript"],
         "demo": "/PagError",
         "source":"ruta del proyecto demo"
