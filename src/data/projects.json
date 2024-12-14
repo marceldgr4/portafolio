@@ -30,6 +30,6 @@
         "description":"Descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la navegacion para le usuario con informarcion necesario",
         "skills":["React","Css","JavaScript"],
         "demo": "/PagError",
-        "source":"ruta del proyecto demo"
+        "source":"https://github.com/marceldgr4/Hackintosh_pag_web.git"
     }
 ]
