@@ -10,7 +10,7 @@ export const Hero =() => {
         <h1 className={styles.title}>Bienvenido.</h1>
         <h3 className={styles.title2}>Soy Marcel Diaz Granados Robayo</h3>
         <p className={styles.description}>
-          Soy ingeniero de sistemas con enfoque en el desarrollo de aplicaciones móviles iOS. 
+          Soy ingeniero de sistemas con enfoque en el desarrollo de aplicaciones Web, móviles. 
           Tengo experiencia en el diseño y desarrollo. Me gusta trabajar en proyectos que me permitan 
           crecer profesionalmente y seguir aprendiendo cosas nuevas para mi vida profesional.
         </p>
@@ -21,6 +21,7 @@ export const Hero =() => {
           <a href="/cv/Marceldgr.pdf" className={styles.cvBtn} download="Marceldgr.pdf">
             <img className={styles.img} src={getImageUrl("hero/down.png")} alt="down" /> Currículo CV
           </a>
+          
         </div>
       </div>
       <img src={getImageUrl("hero/about3.png")} alt="foto de perfil" className={styles.fotoPerfil}/>
