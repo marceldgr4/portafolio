@@ -27,6 +27,14 @@
       "experiences": ["Elaboracion de una sitio web con funcionalidad para un proyecto desarrollo de sitio web.",
                       "Con base de datos"],
       "imageSrc": "history/unimag.png"
+    },
+    {
+      "role": "Desarrollador en web",
+      "organisation": "intouchCX 24/7 Colombia",
+      "startDate": "Ene, 2025",
+      "endDate": "jul,2025",
+      "experiences": ["Elaboracion de diferentes plataformsa web segun la necesidades que se solicitaban en la empresa"],
+      "imageSrc":"history/Logo intouchCX.png"
     }
     
   ]
