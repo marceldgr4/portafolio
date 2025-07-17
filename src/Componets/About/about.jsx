@@ -7,13 +7,13 @@ export const About=()=> {
     <section className={styles.container} id="About">
         <h2 className={styles.title}>Acerca de mi.</h2>
         <div className={styles.content}>
-          {/*ruta para cambiar lao fotoos */}
-            <img src={getImageUrl("about/about4.png")} alt="foto" className={styles.aboutImage}/>
+          {/*ruta para cambiar lao fotos */}
+            <img src={getImageUrl("hero/persona3d2.png")} alt="foto" className={styles.aboutImage}/>
         
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
               {/*cambiar iconos al gusto de la personal  */}
-              <img src={getImageUrl("about/person3d.png")} alt="personal" className={styles.iconos} />
+              <img src={getImageUrl("about/person.png")} alt="personal" className={styles.iconos} />
               <div className={styles.aboutItemText}>
                 <h3 className={styles.title2}>Nivel Personal.</h3>
                   <p className={styles.text}> 
