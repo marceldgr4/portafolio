@@ -13,7 +13,7 @@ export const About=()=> {
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
               {/*cambiar iconos al gusto de la personal  */}
-              <img src={getImageUrl("about/person.png")} alt="personal" className={styles.iconos} />
+              <img src={getImageUrl("about/person3d.png")} alt="personal" className={styles.iconos} />
               <div className={styles.aboutItemText}>
                 <h3 className={styles.title2}>Nivel Personal.</h3>
                   <p className={styles.text}> 
