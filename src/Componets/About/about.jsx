@@ -8,7 +8,7 @@ export const About=()=> {
         <h2 className={styles.title}>Acerca de mi.</h2>
         <div className={styles.content}>
           {/*ruta para cambiar lao fotos */}
-            <img src={getImageUrl("hero/persona3d2.png")} alt="foto" className={styles.aboutImage}/>
+            <img src={getImageUrl("hero/persona3d5.png")} alt="foto" className={styles.aboutImage}/>
         
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>

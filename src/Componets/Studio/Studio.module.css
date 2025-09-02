@@ -30,12 +30,15 @@
 }
 
 .aboutImage {
-    width: 35%;
+    width: 35px;
 }
-
+.StudioImage {
+    width: 25%;
+    margin-right: 50px;
+}
 .iconos {
     padding: 20px;
-    width: 100px;
+    width: 150px;
 }
 
 .aboutItems {
@@ -43,6 +46,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    margin-left: 10%;
 }
 
 .aboutItem {
@@ -51,7 +55,7 @@
     align-items: center;
     border-radius: 20px;
     list-style: none;
-    padding: 25px;
+    padding: 55px;
     background-image: linear-gradient(90deg,
     rgba(162,215,232,0.42) 0%,
     rgba(255,255,255,0) 100%);

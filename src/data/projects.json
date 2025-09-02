@@ -10,7 +10,7 @@
     
     {
     "title":"Pokedex",
-        "imageSrc":"about/about1.png",
+        "imageSrc":"proyect/pokemon.png",
         "description":"Es una aplicación web que permite explorar y visualizar Pokémon de manera interactiva.  ",
         "skills":["React + vite","Css","JavaScript"],
         "demo": "https://pokedex-omega-sepia.vercel.app",
@@ -26,7 +26,7 @@
     },
     {
         "title":"Proyecto pagina web de Hackinthos ",
-        "imageSrc":"about/about5.png",
+        "imageSrc":"proyect/web.png",
         "description":"Descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la navegacion para le usuario con informarcion necesario",
         "skills":["React","Css","JavaScript"],
         "demo": "/PagError",

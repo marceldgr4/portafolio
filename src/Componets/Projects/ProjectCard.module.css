@@ -8,46 +8,63 @@
     box-shadow: 0 16px 14px 0 #04152d;
     padding: 18px 24px;
     max-width: 400px;
+    min-width: 300px;      /* Ancho mínimo para uniformidad */
+    width: 500px;          /* Ancho fijo */
+    min-height: 800px;     /* Alto mínimo para uniformidad */
+    height: 520px;         /* Alto fijo */
     margin-top: 100px;
+    box-sizing: border-box; /* Incluye padding en el tamaño */
 }
 .image{
-    margin-bottom: 16px;
-    width: 200px;
-    margin-top: -140px;
-     transition: transform 0.3s ease; /* Transición suave */
+    margin-bottom: 15px;
+    width: 250px;
+    height: 380px;
+    margin-top: 0px;
+    transition: transform 0.3s ease; /* Transición suave */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin dist
    
 }
 .image:hover {
     transform: scale(1.1); /* Aumentar el tamaño en un 20% */
+    
 
 }
 .title{
         font-size: 25px;
         font-weight: 700;
+        margin-top: 0;
 
 }
 .description{
-    margin-top: 6px;
-    font-size: 26px;
+    margin-top: 10px;
+    font-size: 18px;
     font-weight: 400;
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    align-items: flex-start; /* Alinea el texto arriba */
+    text-align: justify; /* Justifica el texto */
+    font-size: 25px;
+
 }
-.skills
-{
+.skills{
     width: 100%;
     margin-top: 14px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 20%;
     list-style: none;
 
 }
 .skill{
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 300;
     border-radius: 100px;
     background: var(--color-dark);
-    padding: 2px 22px;
+    padding: 2px 20px;
 
 }
 .links{

@@ -18,13 +18,13 @@ export const Hero =() => {
           <a href="mailto:marceldgr@gmail.com" className={styles.contactBtn}>
             <img className={styles.img} src={getImageUrl("hero/correo.png")} alt="contact" /> Contáctame
           </a>
-          <a href="/cv/Marceldgr.pdf" className={styles.cvBtn} download="Marceldgr.pdf">
+          <a href="/CV/CV_Marceldgr.pdf" className={styles.cvBtn} download="Marceldgr.pdf">
             <img className={styles.img} src={getImageUrl("hero/down.png")} alt="down" /> Currículo CV
           </a>
           
         </div>
       </div>
-      <img src={getImageUrl("hero/persona3d4.png")} alt="foto de perfil" className={styles.fotoPerfil}/>
+      <img src={getImageUrl("hero/persona3d6.png")} alt="foto de perfil" className={styles.fotoPerfil}/>
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur}/>
     </section>

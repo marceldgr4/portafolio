@@ -8,7 +8,7 @@ export const Studio=()=> {
         <h2 className={styles.title}>Estudios.</h2>
         <div className={styles.content}>
           {/*ruta para cambiar lao fotoos */}
-            <img src={getImageUrl("about/about2.png")} alt="foto" className={styles.StudioImage}/>
+            <img src={getImageUrl("hero/persona3d7.png")} alt="foto" className={styles.StudioImage}/>
         
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
