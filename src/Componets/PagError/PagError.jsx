@@ -16,7 +16,7 @@ export const PagError = () => {
                 <div className={styles.content}>
                     {/* Imagen al lado izquierdo */}
                     <div className={styles.imgContainer}>
-                        <img src={getImageUrl("about/about5.png")} alt="img" className={styles.img} />
+                        <img src={getImageUrl("hero/erro404.png")} alt="img" className={styles.img} />
                     </div>
 
                     {/* Texto y botón al lado derecho */}
