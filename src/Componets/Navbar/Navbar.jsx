@@ -20,7 +20,7 @@ export const Navbar = () => {
             {/* Título del sitio */}
             {isHomePage ? (
                 <ScrollLink className={styles.title} to="home" smooth={true} duration={500}>
-                 <img src={getImageUrl("nav/logo.png")} alt="Logo" className={styles.logo}/>
+                 <img src={getImageUrl("nav/logo2.png")} alt="Logo" className={styles.logo}/>
        
                     Portafolio
                 </ScrollLink>
