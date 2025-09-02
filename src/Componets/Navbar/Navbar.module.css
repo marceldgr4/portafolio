@@ -10,10 +10,11 @@
     margin: 0 10%;
 }
 .title{
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 700;
     text-decoration: none;
     color: var(--color-text);
+    
 }
 .menuBtn{
     display: none;
@@ -31,6 +32,18 @@
     font-size: 25px;
     color: var(--color-text);
     text-decoration: none; 
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 200px;   /* Ajusta el tamaño según tu preferencia */
+    height: 100px;
+    object-fit: contain;
+    
+    
 }
 @media screen and (max-width:830px) {
     .navbar{
