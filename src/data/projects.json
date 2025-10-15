@@ -36,7 +36,7 @@
         "title":"Proyecto Sistema de gestion de inventario",
         "imageSrc": "proyect/icon.png",
         "description":"Sistema de gestión de inventario diseñado para el control de artículos de papelería, comida y decoración. .",
-        "skills":["Apps Script Google","Sheet Google","JavaScript","Html","Css"],
+        "skills":["Apps Script Google","Sheet Google"],
         "demo": "/InvenProject",
         "source":"https://github.com/marceldgr4/App-inventario-5.0.git"
         

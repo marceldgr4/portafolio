@@ -1,91 +1,69 @@
+import styles from "./App.module.css";
+import { About } from "./Components/About/about";
+import { Contact } from "./Components/Contact/Contact";
+import { Studio } from "./Components/Studio/Studio";
+import { Experience } from "./Components/Experiences/Experience";
+import { Projects } from "./Components/Projects/Projects";
 
-import styles from'./App.module.css';
-import {About} from "./Componets/About/about";
-import{Contact} from "./Componets/Contact/Contact";
-import {Studio} from "./Componets/Studio/Studio";
-import {Experience} from "./Componets/Experiences/Experience";
-import{Projects} from "./Componets/Projects/Projects";
+import { Transport } from "./Components/Trans/Transport";
 
+import { PagError } from "./Components/PagError/PagError";
 
+import { InvenProject } from "./Components/InvenProject/InvenProject";
 
-import {Transport} from "./Componets/Trans/Transport";
+import { Hero } from "./Components/Hero/Hero";
 
-import{PagError} from "./Componets/PagError/PagError"
+import { Navbar } from "./Components/Navbar/Navbar";
 
-import {InvenProject} from "./Componets/InvenProject/InvenProject";
-
-
-
-
-
-import {Hero} from "./Componets/Hero/Hero";
-
-import {Navbar} from "./Componets/Navbar/Navbar";
-
-
-
-
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-
   return (
-
     <Router>
-
       <div className={styles.App}>
-
         <Navbar />
 
         <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="Home">
+                  <Hero />
+                </section>
 
-          <Route path="/" element={
+                <section id="About">
+                  <About />
+                </section>
 
-            <>
+                <section id="Studio">
+                  <Studio />
+                </section>
 
-            <section id="home"><Hero /></section>
+                <section id="Experience">
+                  <Experience />
+                </section>
 
-              <section id="about"><About /></section>
+                <section id="Projects">
+                  <Projects />
+                </section>
 
-              <section id="studio"><Studio /></section>
+                <section id="Contact">
+                  <Contact />
+                </section>
+              </>
+            }
+          />
 
-              <section id="experience"><Experience /></section>
+          <Route path="/Transport" element={<Transport />} />
 
-              <section id="projects"><Projects /></section>
-
-              <section id="contact"><Contact /></section>
-
-              
-
-            </>
-
-          } />
-
-          <Route path="/Transport" element={<Transport/>}/>
-
-          <Route path="/PagError" element={<PagError/>}/>
+          <Route path="/PagError" element={<PagError />} />
 
           <Route path="/InvenProject" element={<InvenProject />} />
-
-          
-
-
-
-
-
-         
-
         </Routes>
-
       </div>
-
     </Router>
-
   );
-
 }
 
 export default App;
