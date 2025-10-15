@@ -28,27 +28,27 @@ function App() {
             path="/"
             element={
               <>
-                <section id="Home">
+                <section id="home">
                   <Hero />
                 </section>
 
-                <section id="About">
+                <section id="about">
                   <About />
                 </section>
 
-                <section id="Studio">
+                <section id="studio">
                   <Studio />
                 </section>
 
-                <section id="Experience">
+                <section id="experience">
                   <Experience />
                 </section>
 
-                <section id="Projects">
+                <section id="projects">
                   <Projects />
                 </section>
 
-                <section id="Contact">
+                <section id="contact">
                   <Contact />
                 </section>
               </>
