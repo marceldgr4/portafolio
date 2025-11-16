@@ -1,12 +1,5 @@
 [
-    {
-        "title":"Transpor SMR",
-        "imageSrc":"Iphone/iphone4.png",
-        "description":"Descripcion del proyecto: prototipo de una App para iOS del servicio de transporte publico para la ciudad de Santa Marta",
-        "skills":["swiftUI"],
-        "demo": "/Transport",
-        "source":"ruta del proyecto demo"
-    },
+    
     
     {
     "title":"Pokedex",
@@ -16,22 +9,7 @@
         "demo": "https://pokedex-omega-sepia.vercel.app",
         "source":"https://github.com/marceldgr4/Pokedex"
     },
-    {
-        "title":"BarberShop",
-        "imageSrc":"Iphone/iphone6.png",
-        "description":"Descripcion del proyecto: prototipo de una App para iOS, para realziar agendamineto de cita para los servicio que ofrece la barber. por el momento esta en desarrollo y mejoras",
-        "skills":["swiftUI"],
-        "demo": "/PagError",
-        "source":"ruta del proyecto demo"
-    },
-    {
-        "title":"Proyecto pagina web de Hackinthos ",
-        "imageSrc":"proyect/web.png",
-        "description":"Descripcion del proyecto: esta en desarrollo, actulizacion de la informacion y mejora de la navegacion para le usuario con informarcion necesario",
-        "skills":["React","Css","JavaScript"],
-        "demo": "/PagError",
-        "source":"https://github.com/marceldgr4/Hackintosh_pag_web.git"
-    },
+    
     {
         "title":"Proyecto Sistema de gestion de inventario",
         "imageSrc": "proyect/icon.png",

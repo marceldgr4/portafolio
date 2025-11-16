@@ -5,7 +5,7 @@
   width: 100%;
   background-color: var(--color-bg, #020b35);
   color: #fff;
-  padding: 100px 8%;
+  padding: 6.25rem 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,10 @@
 
 /* ====== TÍTULO ====== */
 .title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  margin-bottom: 60px;
+  letter-spacing: -0.03rem;
+  margin-bottom: 3.75rem;
   text-align: center;
   background: linear-gradient(90deg, #fff, #c0c0c0);
   -webkit-background-clip: text;
@@ -30,9 +30,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
 }
 
 .imageShowcase {
@@ -43,9 +43,9 @@
 
 .heroImage {
   width: 100%;
-  max-width: 560px;
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  max-width: 35rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.4);
   transition: transform 0.4s ease;
 }
 
@@ -55,36 +55,36 @@
 
 .textBlock {
   flex: 1;
-  min-width: 320px;
+  min-width: 20rem;
 }
 
 .description {
-  font-size: 19px;
+  font-size: 1.2rem;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #d6d6d6;
 }
 
 /* ====== TECNOLOGÍAS ====== */
 .techTitle {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .techList {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
   list-style: none;
   padding: 0;
 }
 
 .techList li {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 8px 18px;
+  padding: 0.5rem 1.125rem;
   border-radius: 999px;
-  font-size: 15px;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
@@ -96,10 +96,10 @@
 /* ====== BOTÓN DE EXPLORAR ====== */
 .exploreButton {
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 1.5rem;
   background-color: #0071e3;
   color: #fff;
-  padding: 12px 30px;
+  padding: 0.75rem 1.875rem;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
@@ -113,33 +113,33 @@
 
 /* ====== CREDENCIALES ====== */
 .credentials {
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
   color: #bcbcbc;
 }
 
 /* ====== GALERÍA ====== */
 .gallerySection {
-  margin-top: 80px;
+  margin-top: 5rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 2.5rem;
+  max-width: 75rem;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.04);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(0.5rem);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 .cardImage {
@@ -149,18 +149,19 @@
 }
 
 .cardBody {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: left;
 }
 
 .cardBody h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .cardBody p {
-  font-size: 15px;
+  font-size: 0.9rem;
   color: #bdbdbd;
   line-height: 1.5;
 }
+

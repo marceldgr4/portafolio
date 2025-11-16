@@ -8,11 +8,12 @@ export const Hero =() => {
     <section className={styles.container}id="Hero">
       <div className={styles.content}>
         <h1 className={styles.title}>Bienvenido.</h1>
-        <h3 className={styles.title2}>Soy Marcel Diaz Granados Robayo</h3>
+        <h2 className={styles.title2}>¡Hola! Soy.</h2>
+        <h3 className={styles.title2}>Marcel Diaz Granados</h3>
+        <h2 className={styles.title3}>Ingeniero de Sistemas </h2>
         <p className={styles.description}>
-          Soy ingeniero de sistemas con enfoque en el desarrollo de aplicaciones Web, móviles. 
-          Tengo experiencia en el diseño y desarrollo. Me gusta trabajar en proyectos que me permitan 
-          crecer profesionalmente y seguir aprendiendo cosas nuevas para mi vida profesional.
+         Apasionado por crear soluciones tecnológicas que realmente marquen una diferencia. 
+          
         </p>
         <div className={styles.buttonContainer}>
           <a href="mailto:marceldgr@gmail.com" className={styles.contactBtn}>
@@ -24,7 +25,7 @@ export const Hero =() => {
           
         </div>
       </div>
-      <img src={getImageUrl("hero/persona3d6.png")} alt="foto de perfil" className={styles.fotoPerfil}/>
+      <img src={getImageUrl("hero/persona3d8.png")} alt="foto de perfil" className={styles.fotoPerfil}/>
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur}/>
     </section>

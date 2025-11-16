@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 3.125rem 1.25rem;
   font-family: Arial, sans-serif;
   height: 100vh; /* Centra el contenido verticalmente */
   background-color: var(--background-color);
@@ -15,14 +15,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Espacio entre imagen y texto */
+  gap: 1.875rem; /* Espacio entre imagen y texto */
   flex-wrap: wrap; /* Asegura ajuste en pantallas pequeñas */
 }
 
 /* Contenedor de la imagen */
 .imgContainer {
   flex: 1;
-  max-width: 300px;
+  max-width: 18.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,34 +30,34 @@
 
 /* Estilo de las imágenes */
 .img {
-  max-width: 250%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 /* Título */
 .title {
-  font-size: 150px;
+  font-size: 9.375rem;
   color: var(--error-color, #ff0000);
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 /* Subtítulo */
 h2 {
   font-size: 1.5rem;
   color: #929ca5;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 /* Botón */
 .button {
   display: inline-block;
-  padding: 12px 20px;
-  font-size: 18px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.125rem;
   color: #fff;
   background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
@@ -71,56 +71,57 @@ h2 {
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   .content {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
   }
 
   .title {
-      font-size: 100px;
+    font-size: 6.25rem;
   }
 
   .button {
-      font-size: 16px;
-      padding: 10px 15px;
+    font-size: 1rem;
+    padding: 0.625rem 0.9375rem;
   }
 
   .imgContainer {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .content {
-      flex-direction: row;
-      justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .title {
-      font-size: 120px;
+    font-size: 7.5rem;
   }
 
   .button {
-      font-size: 18px;
-      padding: 12px 20px;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.25rem;
   }
 
   .imgContainer {
-      max-width: 250px;
+    max-width: 15.625rem;
   }
 }
 
 @media (min-width: 1200px) {
   .title {
-      font-size: 150px;
+    font-size: 9.375rem;
   }
 
   .button {
-      font-size: 20px;
-      padding: 15px 25px;
+    font-size: 1.25rem;
+    padding: 0.9375rem 1.5625rem;
   }
 
   .imgContainer {
-      max-width: 300px;
+    max-width: 18.75rem;
   }
 }
+

@@ -8,8 +8,8 @@ export const About=()=> {
         <h2 className={styles.title}>Acerca de mi.</h2>
         <div className={styles.content}>
           {/*ruta para cambiar lao fotos */}
-            <img src={getImageUrl("hero/persona3d5.png")} alt="foto" className={styles.aboutImage}/>
-        
+          {/*  <img src={getImageUrl("hero/persona3d5.png")} alt="foto" className={styles.aboutImage}/>
+        */}
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
               {/*cambiar iconos al gusto de la personal  */}
@@ -17,10 +17,8 @@ export const About=()=> {
               <div className={styles.aboutItemText}>
                 <h3 className={styles.title2}>Nivel Personal.</h3>
                   <p className={styles.text}> 
-                    Me consideró algo relajado, divertido con mi grupo de amigos y familia
-                    cuando la ocasión lo permite. también me considero sociable, aunque en 
-                    algunas ocaciones doy la impresión de estar molesto por el tono de mi voz,
-                    pero es algo que me esfuezo por mejorar constantemente.</p>
+                    Me consideró una persona curiosa, compremetida, sociable con buena disposición para trabajar en equipo. Disfruto escuchar, proponer ideas y generar 
+                    un ambiente positivo, sin perder el enfoque en la calidad y el cumplimiento.</p>
               </div>
             </li>
 
@@ -29,22 +27,14 @@ export const About=()=> {
               <img src={getImageUrl("about/diploma.png")} alt="profesional"className={styles.iconos} />
                 <div className={styles.aboutItemText}>
                   <h3>Nivel Profesional.</h3>
-                  <p>Considero que soy dedicada y comprometido con mis responsabilidades 
-                    lo que ayuda mejor constantemente como en lo profesional y académico 
-                    siempre buscando dar lo mejor de mi</p>
+                  <p>Disfruto trabajar en el desarrollo web y móvil, especialmente en la construcción de 
+                    experiencias intuitivas y funcionales. Tengo experiencia en tecnologías como React,
+                     SwiftUI, Spring Boot me motiva poder combinar el diseño, la lógica 
+                    y la arquitectura para entregar productos bien construidos y con una visión clara.</p>
                 </div>
             </li>
 
-            <li className={styles.aboutItem}>
-                {/*cambiar iconos al gusto de la personal  */}
-              <img src={getImageUrl("about/infor.png")} alt="info" className={styles.iconos} />
-              <div className={styles.aboutItemText}>
-                <h3>Intereses.</h3>
-                <p>Una de la cosa que me gusta es la tecnologías y procuro esta lo mejor informado
-                  ya sea en nuevos desarrollo de hermanitas, robótica, entrenamiento, mecánica
-                  automotriz para tener una punto critico.</p>
-              </div>
-            </li>
+           
           </ul>
         </div>
     </section>

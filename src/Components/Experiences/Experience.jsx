@@ -48,9 +48,10 @@ export const Experience = () => {
       <h2>Arquictecturas.</h2>
       <ul>
         <li>
-          <h3>MVC</h3><p>Baisco</p></li>
+          <h3>MVC</h3><p>Intermedio</p></li>
         <li><h3>MVVM</h3><p>Intermedio</p></li>
-        <li><h3>VIPER</h3><p>Basico</p></li>
+        <li><h3>Microservicios</h3><p>Baisco</p></li>
+   
       </ul>
 
     </div>

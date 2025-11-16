@@ -1,26 +1,36 @@
 @import "../../vars.css";
 
-.Container{
-    margin-top: 90px;
-    color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
-    
+.Container {
+  margin-top: 6rem;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
 }
-.title{
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+
+.title {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.Projects{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    width: 100%;
-    
+
+.Projects {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .Container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .title {
+    font-size: 3rem;
+  }
 }

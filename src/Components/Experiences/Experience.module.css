@@ -6,133 +6,92 @@
   background-color: rgba(12, 12, 12, 0.236);
   border-radius: 1rem;
   padding: 3rem;
-  margin-top: 129px;
+  margin-top: 8rem;
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
-  backdrop-filter: blur(10px); /* Efecto de difuminado */
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.339);
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
-
 }
 
 .title {
   color: var(--color-text);
-  font-size: 70px;
+  font-size: 4.5rem;
   font-weight: 700;
-  letter-spacing: 1.75px;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
-}
-
-.txt {
-  color: var(--color-text);
-  font-weight: 500;
-  letter-spacing: 1.75px;
-  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 45px;
+  margin-top: 3rem;
 }
 
 .skills {
   width: 45%;
   display: flex;
   flex-wrap: wrap;
-  gap: 37px;
+  gap: 2.5rem;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 11px;
+  gap: 0.7rem;
 }
 
 .skillImageContainer {
-  border-radius: 100%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
 .skillImageContainer img {
   width: 80%;
-  
-  transition: transform 0.3s ease; /* Transición suave */
+  transition: transform 0.3s ease;
 }
+
 .skillImageContainer img:hover {
-  transform: scale(1.2); /* Aumentar el tamaño en un 20% */
+  transform: scale(1.2);
 }
 
 .skill p {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-family: var(--font-roboto);
   font-weight: 500;
-}
-
-.Arq h2 {
-  margin-top: 50px;
-  color: var(--color-text);
-  font-size: 60px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-}
-
-.Arq li {
-  gap: 17px;
-  background: #19376d;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 10px;
-}
-
-.Arq h3 {
-  display: flex;
-  justify-items: center;
-  color: var(--color-text);
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: 1.75px;
-  margin-top: 20px;
-  margin-left: 60px;
-}
-
-.Arq p {
-  margin-left: 60px;
-  color: var(--color-text);
-  font-size: 20px;
 }
 
 .history {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .historyItem {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 17px;
-  background: #19376d;
+  gap: 1rem;
   background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 10px;
-  padding: 24px;
-  backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
 }
 
 .historyItem img {
-  width: 50px;
-  
+  width: 3rem;
 }
 
 .historyItem img:hover {
@@ -144,45 +103,59 @@
 }
 
 .historyItemDetails h3 {
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .historyItemDetails p {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
 .historyItemDetails ul {
-  margin-top: 6px;
+  margin-top: 0.4rem;
   list-style-position: inside;
-  font-size: 25px;
+  font-size: 1.5rem;
   list-style-type: disc;
-  margin-left: 17px;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 830px) {
   .content {
     flex-direction: column;
     align-items: center;
-    gap: 34px;
+    gap: 2rem;
   }
 
   .skills {
     width: 100%;
-    flex-direction: row;
     justify-content: center;
   }
 
   .history {
     width: 100%;
-    gap: 9px;
+    gap: 1rem;
   }
 
   .container {
-    background: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    backdrop-filter: blur(15px);
+    padding: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+  }
+  .historyItemDetails h3 {
+    font-size: 1.5rem;
+  }
+  .historyItemDetails p {
+    font-size: 1rem;
+  }
+  .historyItemDetails ul {
+    font-size: 1.2rem;
+  }
+}
+

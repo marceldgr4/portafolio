@@ -1,85 +1,75 @@
 @import "../../vars.css";
 
-.Container{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background:  linear-gradient(180deg,#576cbc 0%, #132a53 100%);
-    box-shadow: 0 16px 14px 0 #04152d;
-    padding: 18px 24px;
-    max-width: 400px;
-    min-width: 300px;      /* Ancho mínimo para uniformidad */
-    width: 500px;          /* Ancho fijo */
-    min-height: 800px;     /* Alto mínimo para uniformidad */
-    height: 520px;         /* Alto fijo */
-    margin-top: 100px;
-    box-sizing: border-box; /* Incluye padding en el tamaño */
+.Container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0 1rem 0.875rem 0 #04152d;
+  padding: 1.125rem 1.5rem;
+  width: 100%;
+  max-width: 25rem;
+  min-width: 18.75rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
-.image{
-    margin-bottom: 15px;
-    width: 250px;
-    height: 380px;
-    margin-top: 0px;
-    transition: transform 0.3s ease; /* Transición suave */
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    object-fit: cover; /* Asegura que la imagen cubra el área sin dist
-   
-}
-.image:hover {
-    transform: scale(1.1); /* Aumentar el tamaño en un 20% */
-    
 
+.Container:hover {
+  transform: scale(1.05);
 }
-.title{
-        font-size: 25px;
-        font-weight: 700;
-        margin-top: 0;
 
+.image {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.625rem;
+  object-fit: cover;
 }
-.description{
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    flex: 1; /* Ocupa el espacio disponible */
-    display: flex;
-    align-items: flex-start; /* Alinea el texto arriba */
-    text-align: justify; /* Justifica el texto */
-    font-size: 25px;
 
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
 }
-.skills{
-    width: 100%;
-    margin-top: 14px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20%;
-    list-style: none;
 
+.description {
+  margin-top: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  flex: 1;
+  text-align: justify;
 }
-.skill{
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 100px;
-    background: var(--color-dark);
-    padding: 2px 20px;
 
+.skills {
+  width: 100%;
+  margin-top: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  list-style: none;
 }
-.links{
-    width: 100%;
-    margin-top: 26px;
-    display: flex;
-    justify-content: space-around;
 
+.skill {
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 100px;
+  background: var(--color-dark);
+  padding: 0.125rem 1.25rem;
 }
-.link{
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 30px;
-    font-weight: 500;
-    border-radius: 100px;
-    background: var(--color-primary);
-    padding: 1px 22px;
+
+.links {
+  width: 100%;
+  margin-top: 1.625rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 100px;
+  background: var(--color-primary);
+  padding: 0.0625rem 1.375rem;
 }

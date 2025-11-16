@@ -1,59 +1,73 @@
 @import "../../vars.css";
 
-.Container{
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-secondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100vw;
-    padding: 58px 10%;
-    gap: 10px;
+.Container {
+  color: var(--color-text);
+  margin-top: 7.5rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 3.625rem 10%;
+  gap: 0.625rem;
 }
-.txt h1{
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: 4px;
 
+.txt h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
 }
-.txt p{
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 2px;
+
+.txt p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.125rem;
 }
-.links{
-    display: flex;
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 1.625rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: 0.09rem;
+}
+
+@media screen and (max-width: 830px) {
+  .Container {
     flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    gap: 26px;
-}
-.link{
-    display: flex;
+    gap: 1.5rem;
     align-items: center;
-    gap: 25px;
+  }
+
+  .txt {
+    text-align: center;
+  }
+
+  .txt h1 {
+    font-size: 3.5rem;
+  }
+
+  .txt p {
+    font-size: 2rem;
+  }
+
+  .links {
+    align-items: center;
+  }
 }
-.link a{
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-}
-@media screen and (max-width:830px){
-    .Container{
-        flex-direction: column;
-        gap: 23px;
-    }
-    
-    .txt{
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-    .links{
-        align-items: center;
-    }
-}
+
 
