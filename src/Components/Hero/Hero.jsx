@@ -7,8 +7,8 @@ export const Hero =() => {
   return (
     <section className={styles.container}id="Hero">
       <div className={styles.content}>
-        <h1 className={styles.title}>Bienvenido.</h1>
-        <h2 className={styles.title2}>¡Hola! Soy.</h2>
+        <h1 className={styles.title}>BIENBENIDO.</h1>
+        <h2 className={styles.title2}>¡Hola! Soy!.</h2>
         <h3 className={styles.title2}>Marcel Diaz Granados</h3>
         <h2 className={styles.title3}>Ingeniero de Sistemas </h2>
         <p className={styles.description}>
