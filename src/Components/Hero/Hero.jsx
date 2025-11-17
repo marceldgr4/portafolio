@@ -19,7 +19,7 @@ export const Hero =() => {
           <a href="mailto:marceldgr@gmail.com" className={styles.contactBtn}>
             <img className={styles.img} src={getImageUrl("hero/correo.png")} alt="contact" /> Contáctame
           </a>
-          <a href="/CV/CV_Marceldgr.pdf" className={styles.cvBtn} download="Marceldgr.pdf">
+          <a href="/CV/CV_Marceldgr_ATS.pdf" className={styles.cvBtn} download="Marceldgr.pdf">
             <img className={styles.img} src={getImageUrl("hero/down.png")} alt="down" /> Currículo CV
           </a>
           
