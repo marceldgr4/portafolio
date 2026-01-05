@@ -9,12 +9,20 @@ export const Projects = () => {
 
   useEffect(() => {
     // Animación de entrada escalonada
+    let isMounted = true;
+    
     setVisibleProjects([]);
     projects.forEach((project, index) => {
-      setTimeout(() => {
-        setVisibleProjects(prev => [...prev, project]);
+      const timeoutId = setTimeout(() => {
+        if (isMounted) {
+          setVisibleProjects(prev => [...prev, project]);
+        }
       }, index * 100);
     });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // Obtener todas las tecnologías únicas
