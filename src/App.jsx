@@ -1,10 +1,11 @@
 import { lazy, Suspense } from "react";
 import styles from "./App.module.css";
 import { Navbar } from "./Components/Navbar/Navbar";
+import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Loading } from "./Components/Loading/Loading";
 
-// Lazy loading de componentes
+// Lazy loading de componentes para mejor performance
 const Hero = lazy(() => import("./Components/Hero/Hero").then(module => ({ default: module.Hero })));
 const About = lazy(() => import("./Components/About/about").then(module => ({ default: module.About })));
 const Studio = lazy(() => import("./Components/Studio/Studio").then(module => ({ default: module.Studio })));
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
         <Suspense fallback={<Loading />}>
           <Routes>
+            {/* Ruta principal con todas las secciones */}
             <Route
               path="/"
               element={
@@ -49,12 +51,17 @@ function App() {
                   <section id="contact">
                     <Contact />
                   </section>
+
+                  <ScrollToTop />
                 </>
               }
             />
 
+            {/* Rutas de proyectos individuales */}
             <Route path="/Transport" element={<Transport />} />
             <Route path="/InvenProject" element={<InvenProject />} />
+            
+            {/* Ruta 404 - debe ir al final */}
             <Route path="*" element={<PagError />} />
           </Routes>
         </Suspense>
