@@ -143,9 +143,9 @@ export const Contact = () => {
           <p className={styles.copyright}>
             © {new Date().getFullYear()} Marcel Díaz Granados. Todos los derechos reservados.
           </p>
-          <p className={styles.tagline}>
+         {/*<p className={styles.tagline}>
             Construido con <span className={styles.heart}>♥</span> y React
-          </p>
+          </p>*/}
         </div>
       </div>
     </footer>
