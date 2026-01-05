@@ -1,73 +1,624 @@
 @import "../../vars.css";
 
-.Container {
+/* ====== ANIMACIONES ====== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(88, 101, 242, 0.8);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
+  position: relative;
   color: var(--color-text);
-  margin-top: 7.5rem;
-  background-color: var(--color-secondary);
+  background: linear-gradient(135deg, rgba(12, 20, 40, 0.98) 0%, rgba(26, 42, 78, 0.98) 50%, rgba(12, 20, 40, 0.98) 100%);
+  width: 100%;
+  padding: 6rem 10% 2rem;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Elementos decorativos de fondo */
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gradientOrb1,
+.gradientOrb2,
+.gradientOrb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 15s ease-in-out infinite;
+}
+
+.gradientOrb1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(88, 101, 242, 0.6), transparent);
+  top: -200px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.gradientOrb2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.6), transparent);
+  bottom: -150px;
+  left: -100px;
+  animation-delay: 5s;
+}
+
+.gradientOrb3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(114, 137, 218, 0.6), transparent);
+  top: 50%;
+  left: 50%;
+  animation-delay: 10s;
+}
+
+/* ====== CONTENIDO ====== */
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ====== SECCIÓN DE TEXTO ====== */
+.textSection {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.headerDecoration {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 3.625rem 10%;
-  gap: 0.625rem;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.txt h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  letter-spacing: 0.25rem;
+.decorationLine {
+  height: 2px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.6), transparent);
+  animation: slideInLine 1s ease-out;
 }
 
-.txt p {
-  font-size: 2.5rem;
+.decorationDot {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  border-radius: 50%;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #5865f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
   font-weight: 400;
-  letter-spacing: 0.125rem;
+}
+
+.highlightText {
+  color: #7289da;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Estadísticas */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* ====== SECCIÓN DE LINKS ====== */
+.linksSection {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.linksTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
 }
 
 .links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  gap: 1.625rem;
-}
-
-.link {
-  display: flex;
-  align-items: center;
   gap: 1.5rem;
 }
 
-.link a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: 1.875rem;
-  font-weight: 400;
-  letter-spacing: 0.09rem;
+/* ====== ITEM DE LINK ====== */
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(145deg, rgba(26, 42, 78, 0.4), rgba(12, 20, 40, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out;
+  animation-fill-mode: both;
 }
 
-@media screen and (max-width: 830px) {
-  .Container {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
+.linkItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.linkItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.linkItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Efecto de brillo al hover */
+.linkItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.linkItem:hover::before {
+  left: 100%;
+}
+
+/* Estados hover por color */
+.linkItemblue:hover {
+  transform: translateY(-8px);
+  border-color: rgba(88, 101, 242, 0.4);
+  box-shadow: 0 20px 40px rgba(88, 101, 242, 0.2);
+  background: linear-gradient(145deg, rgba(88, 101, 242, 0.15), rgba(26, 42, 78, 0.5));
+}
+
+.linkItemlinkedin:hover {
+  transform: translateY(-8px);
+  border-color: rgba(10, 102, 194, 0.4);
+  box-shadow: 0 20px 40px rgba(10, 102, 194, 0.2);
+  background: linear-gradient(145deg, rgba(10, 102, 194, 0.15), rgba(26, 42, 78, 0.5));
+}
+
+.linkItempurple:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(26, 42, 78, 0.5));
+}
+
+/* ====== ICONO ====== */
+.iconWrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBackground {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+.iconBackgroundblue {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.2), rgba(114, 137, 218, 0.2));
+}
+
+.iconBackgroundlinkedin {
+  background: linear-gradient(135deg, rgba(10, 102, 194, 0.2), rgba(0, 119, 181, 0.2));
+}
+
+.iconBackgroundpurple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(167, 139, 250, 0.2));
+}
+
+.linkItem:hover .iconBackground {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
+  transition: all 0.4s ease;
+}
+
+.linkItem:hover .icon {
+  transform: scale(1.15) translateY(-3px);
+  filter: drop-shadow(0 8px 20px rgba(88, 101, 242, 0.6));
+}
+
+/* ====== CONTENIDO DEL LINK ====== */
+.linkContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.linkLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.linkValue {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.linkItem:hover .linkValue {
+  color: #7289da;
+}
+
+.linkDescription {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  margin-top: 0.25rem;
+}
+
+/* Notificación de copiado */
+.copiedNotification {
+  font-size: 0.85rem;
+  color: #4ade80;
+  font-weight: 600;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* ====== FLECHA ====== */
+.linkArrow {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.linkItem:hover .linkArrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #7289da;
+}
+
+/* ====== FOOTER BOTTOM ====== */
+.footerBottom {
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin-bottom: 2rem;
+}
+
+.bottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heart {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
-  .txt {
+  .textSection {
     text-align: center;
   }
 
-  .txt h1 {
-    font-size: 3.5rem;
+  .headerDecoration {
+    justify-content: center;
   }
 
-  .txt p {
-    font-size: 2rem;
-  }
-
-  .links {
-    align-items: center;
+  .stats {
+    justify-content: center;
   }
 }
 
+@media screen and (max-width: 830px) {
+  .container {
+    padding: 4rem 5% 2rem;
+  }
 
+  .content {
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .statDivider {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  }
+
+  .linkItem {
+    padding: 1.5rem;
+  }
+
+  .iconWrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .linkValue {
+    font-size: 1.15rem;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 3rem 4% 1.5rem;
+  }
+
+  .decorationLine {
+    width: 40px;
+  }
+
+  .stats {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .statNumber {
+    font-size: 1.5rem;
+  }
+
+  .statLabel {
+    font-size: 0.8rem;
+  }
+
+  .linkItem {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .linkLabel {
+    font-size: 0.75rem;
+  }
+
+  .linkValue {
+    font-size: 1rem;
+  }
+
+  .linkDescription {
+    font-size: 0.85rem;
+  }
+
+  .copyright,
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .gradientOrb1,
+  .gradientOrb2,
+  .gradientOrb3 {
+    display: none;
+  }
+}

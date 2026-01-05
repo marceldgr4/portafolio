@@ -1,69 +1,232 @@
 @import "../../vars.css";
 
+/* ====== ANIMACIONES ====== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(88, 101, 242, 0.8);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(10deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
 .container {
   position: relative;
   color: var(--color-text);
-  background: linear-gradient(135deg, rgba(12, 12, 12, 0.4) 0%, rgba(25, 55, 109, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(12, 20, 40, 0.95) 0%, rgba(26, 42, 78, 0.95) 50%, rgba(12, 20, 40, 0.95) 100%);
   border-radius: 2rem;
-  padding: 4rem;
-  margin: 8rem 10% 4rem;
-  z-index: 1;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(88, 108, 188, 0.2);
+  padding: 5rem 4rem;
+  margin: 8rem 10% 6rem;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Elementos de fondo decorativos */
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floatingCircle1,
+.floatingCircle2,
+.floatingCircle3 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+  animation: float 12s ease-in-out infinite;
+}
+
+.floatingCircle1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(88, 101, 242, 0.4), transparent);
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.floatingCircle2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent);
+  bottom: 100px;
+  left: -50px;
+  animation-delay: 4s;
+}
+
+.floatingCircle3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(114, 137, 218, 0.4), transparent);
+  top: 50%;
+  left: 50%;
+  animation-delay: 8s;
+}
+
+/* ====== HEADER ====== */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.headerDecoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.decorationLine {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.6), transparent);
+  animation: slideInLine 1s ease-out;
+}
+
+.decorationDot {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  border-radius: 50%;
+  animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
 .title {
   color: var(--color-text);
-  font-size: clamp(2.5rem, 4vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.title::after {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  margin: 1rem auto 0;
-  border-radius: 2px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #5865f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
-  text-align: center;
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 800px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   line-height: 1.7;
 }
 
+/* ====== CONTENIDO ====== */
 .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin-top: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
-.skillsSection,
-.historySection {
-  flex: 1;
-  min-width: 0;
+/* ====== HEADER DE SECCIÓN ====== */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .sectionTitle {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: var(--color-primary);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .sectionTitle::after {
@@ -73,16 +236,35 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: var(--color-primary);
+  background: linear-gradient(90deg, #5865f2, #7289da);
   border-radius: 2px;
 }
 
-/* Skills Section */
+.titleIcon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 8px rgba(88, 101, 242, 0.6));
+}
+
+.skillCount,
+.historyCount {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: rgba(88, 101, 242, 0.1);
+  border: 1px solid rgba(88, 101, 242, 0.2);
+  border-radius: 2rem;
+}
+
+/* ====== SKILLS SECTION ====== */
+.skillsSection {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 2rem;
-  width: 100%;
+  gap: 1.5rem;
 }
 
 .skill {
@@ -90,18 +272,37 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  background: rgba(88, 108, 188, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.25rem 0.75rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, rgba(26, 42, 78, 0.4), rgba(12, 20, 40, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+.skill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.skill:hover::before {
+  left: 100%;
+}
+
+.skillActive,
 .skill:hover {
-  transform: translateY(-10px);
-  background: rgba(88, 108, 188, 0.1);
-  border-color: rgba(88, 108, 188, 0.3);
-  box-shadow: 0 10px 30px rgba(88, 108, 188, 0.2);
+  transform: translateY(-12px);
+  background: linear-gradient(145deg, rgba(88, 101, 242, 0.2), rgba(26, 42, 78, 0.5));
+  border-color: rgba(88, 101, 242, 0.4);
+  box-shadow: 0 15px 35px rgba(88, 101, 242, 0.25);
 }
 
 .skillImageContainer {
@@ -111,13 +312,28 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(88, 108, 188, 0.1);
+  background: rgba(88, 101, 242, 0.1);
   padding: 0.75rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.skillGlow {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.3), rgba(114, 137, 218, 0.3));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(10px);
+}
+
+.skill:hover .skillGlow {
+  opacity: 1;
 }
 
 .skill:hover .skillImageContainer {
-  background: rgba(88, 108, 188, 0.2);
+  background: rgba(88, 101, 242, 0.2);
   transform: scale(1.1) rotate(10deg);
 }
 
@@ -125,40 +341,93 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(88, 108, 188, 0.3));
+  filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
+  transition: filter 0.3s ease;
 }
 
-.skill p {
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  font-family: var(--font-roboto);
-  font-weight: 500;
+.skill:hover .skillImageContainer img {
+  filter: drop-shadow(0 6px 16px rgba(88, 101, 242, 0.6));
+}
+
+.skillTitle {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-weight: 600;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  transition: color 0.3s ease;
 }
 
-/* History Section */
+.skill:hover .skillTitle {
+  color: #7289da;
+}
+
+.skillTooltip {
+  position: absolute;
+  bottom: -30px;
+  font-size: 0.75rem;
+  color: #7289da;
+  font-weight: 600;
+  background: rgba(88, 101, 242, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* ====== HISTORY SECTION ====== */
+.historySection {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
 .history {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   list-style: none;
   padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Timeline vertical */
+.history::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(88, 101, 242, 0.3), rgba(114, 137, 218, 0.3));
 }
 
 .historyItem {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2rem;
-  border-radius: 1rem;
-  background: rgba(88, 108, 188, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, rgba(26, 42, 78, 0.4), rgba(12, 20, 40, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  animation: slideInLeft 0.6s ease-out;
+  animation-fill-mode: both;
 }
 
+.historyItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.historyItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.historyItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Barra lateral animada */
 .historyItem::before {
   content: '';
   position: absolute;
@@ -166,91 +435,174 @@
   left: 0;
   width: 4px;
   height: 0;
-  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(180deg, #5865f2, #7289da);
   transition: height 0.4s ease;
 }
 
+.historyItemActive::before,
 .historyItem:hover::before {
   height: 100%;
 }
 
+.historyItemActive,
 .historyItem:hover {
-  transform: translateX(10px);
-  background: rgba(88, 108, 188, 0.08);
-  border-color: rgba(88, 108, 188, 0.3);
-  box-shadow: 0 10px 30px rgba(88, 108, 188, 0.15);
+  transform: translateX(12px);
+  background: linear-gradient(145deg, rgba(88, 101, 242, 0.15), rgba(26, 42, 78, 0.5));
+  border-color: rgba(88, 101, 242, 0.3);
+  box-shadow: 0 15px 35px rgba(88, 101, 242, 0.2);
 }
 
-.historyItem > img {
+/* Timeline dot */
+.timelineDot {
+  position: absolute;
+  left: -10px;
+  top: 2.5rem;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(12, 20, 40, 0.9);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.historyItem:hover .timelineDot {
+  transform: scale(1.5);
+  box-shadow: 0 0 0 6px rgba(12, 20, 40, 0.9), 0 0 15px rgba(88, 101, 242, 0.6);
+}
+
+/* Icono de la empresa */
+.companyIconWrapper {
+  position: relative;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyIconBackground {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.15), rgba(114, 137, 218, 0.15));
+  transition: all 0.4s ease;
+}
+
+.historyItem:hover .companyIconBackground {
+  transform: rotate(10deg) scale(1.1);
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.25), rgba(114, 137, 218, 0.25));
+}
+
+.companyIconWrapper img {
+  width: 45px;
+  height: 45px;
   object-fit: contain;
-  border-radius: 8px;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
 }
 
-.historyItem:hover > img {
+.historyItem:hover .companyIconWrapper img {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(88, 108, 188, 0.5);
 }
 
+/* Detalles de historia */
 .historyItemDetails {
   flex: 1;
-  font-family: var(--font-roboto);
 }
 
-.historyItemDetails h3 {
-  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-text);
-  line-height: 1.4;
+.historyHeader {
+  margin-bottom: 0.75rem;
 }
 
-.historyItemDetails > p {
-  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
-  font-weight: 300;
+.historyRole {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.historyItem:hover .historyRole {
+  color: #7289da;
+}
+
+.historyOrganisation {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-.historyItemDetails ul {
-  margin-top: 1rem;
-  list-style-position: inside;
-  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
-  list-style-type: none;
-  padding-left: 0;
+.historyDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.75rem 0 1rem;
 }
 
-.historyItemDetails ul li {
+.dateIcon {
+  font-size: 1rem;
+}
+
+.experiencesList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.experienceItem {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.75rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  transition: all 0.3s ease;
 }
 
-.historyItemDetails ul li::before {
-  content: '▹';
+.experienceItem:hover {
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateX(5px);
+}
+
+.experienceIcon {
   position: absolute;
   left: 0;
-  color: var(--color-primary);
+  color: #7289da;
   font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
-/* Architecture Section */
+.experienceItem:hover .experienceIcon {
+  transform: translateX(3px);
+}
+
+/* ====== ARQUITECTURAS SECTION ====== */
 .arqSection {
   margin-top: 4rem;
   padding-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.arqSubtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
 }
 
 .arqList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -259,58 +611,141 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
-  background: rgba(88, 108, 188, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(26, 42, 78, 0.4), rgba(12, 20, 40, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: scaleIn 0.6s ease-out;
+  animation-fill-mode: both;
 }
 
-.arqItem:hover {
-  transform: translateY(-5px);
-  background: rgba(88, 108, 188, 0.1);
-  border-color: rgba(88, 108, 188, 0.3);
-  box-shadow: 0 10px 30px rgba(88, 108, 188, 0.2);
+.arqItem:nth-child(1) {
+  animation-delay: 0.1s;
 }
 
-.arqItem h3 {
-  font-size: clamp(1.25rem, 1.5vw, 1.75rem);
-  font-weight: 600;
+.arqItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arqItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.arqGlow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.5rem;
+  background: linear-gradient(45deg, transparent, rgba(88, 101, 242, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.arqItemActive .arqGlow,
+.arqItem:hover .arqGlow {
+  opacity: 1;
+}
+
+/* Variantes de color para arquitecturas */
+.arqItemblue:hover {
+  transform: translateY(-8px);
+  border-color: rgba(88, 101, 242, 0.4);
+  box-shadow: 0 20px 40px rgba(88, 101, 242, 0.25);
+}
+
+.arqItempurple:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.25);
+}
+
+.arqItemgreen:hover {
+  transform: translateY(-8px);
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.25);
+}
+
+.arqIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
+  transition: all 0.4s ease;
+}
+
+.arqItem:hover .arqIcon {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.arqNombre {
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
+  font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--color-text);
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.arqItem:hover .arqNombre {
+  color: #7289da;
+}
+
+.arqTitulo {
+  font-size: clamp(0.95rem, 1.1vw, 1rem);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .arqDescription {
-  font-size: clamp(0.875rem, 1vw, 0.95rem);
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.75rem;
-  font-weight: 300;
+  font-size: clamp(0.85rem, 1vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .level {
   display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  background: rgba(88, 108, 188, 0.2);
-  border: 1px solid rgba(88, 108, 188, 0.3);
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  font-weight: 500;
-  color: var(--color-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.arqItem:hover .level {
-  background: var(--color-primary);
-  color: var(--color-text);
-  transform: scale(1.05);
+.levelblue {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.2), rgba(114, 137, 218, 0.2));
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  color: #7289da;
 }
 
-/* Responsive para tablets grandes */
+.levelpurple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(167, 139, 250, 0.2));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+}
+
+.levelgreen {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.2));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.arqItem:hover .level {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+/* ====== RESPONSIVE ====== */
 @media screen and (max-width: 1200px) {
   .container {
-    padding: 3rem 2rem;
-    margin: 6rem 8% 3rem;
+    padding: 4rem 3rem;
+    margin: 6rem 8% 5rem;
   }
 
   .content {
@@ -319,19 +754,18 @@
 
   .skills {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 }
 
-/* Responsive para tablets */
 @media screen and (max-width: 1024px) {
   .container {
-    padding: 3rem 2rem;
-    margin: 5rem 5% 3rem;
+    padding: 3.5rem 2.5rem;
+    margin: 5rem 6% 4rem;
   }
 
   .content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
 
@@ -340,15 +774,19 @@
   }
 
   .arqList {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
   }
 }
 
-/* Responsive para móviles */
 @media screen and (max-width: 830px) {
   .container {
-    padding: 2.5rem 1.5rem;
-    margin: 4rem 5% 2rem;
+    padding: 3rem 2rem;
+    margin: 4rem 5% 3rem;
+  }
+
+  .decorationLine {
+    width: 50px;
   }
 
   .content {
@@ -357,7 +795,7 @@
 
   .skills {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .skillImageContainer {
@@ -369,15 +807,28 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.75rem;
   }
 
-  .historyItem > img {
-    width: 50px;
-    height: 50px;
+  .history::before {
+    display: none;
   }
 
-  .historyItemDetails ul li {
+  .timelineDot {
+    display: none;
+  }
+
+  .companyIconWrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .companyIconWrapper img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experienceItem {
     text-align: left;
   }
 
@@ -388,65 +839,48 @@
 
   .arqList {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
 
-/* Responsive para móviles pequeños */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .container {
-    padding: 2rem 1rem;
-    margin: 3rem 4% 1.5rem;
+    padding: 2.5rem 1.5rem;
+    margin: 3rem 4% 2rem;
+  }
+
+  .decorationLine {
+    width: 40px;
   }
 
   .skills {
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    gap: 1rem;
+    gap: 0.875rem;
   }
 
   .skillImageContainer {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
 
   .skill {
-    padding: 0.75rem;
+    padding: 1rem 0.5rem;
   }
 
   .historyItem {
-    padding: 1.25rem;
-  }
-
-  .historyItemDetails ul li {
-    font-size: 0.9rem;
-  }
-}
-
-/* Muy pequeño */
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 1.5rem 0.75rem;
-    margin: 2.5rem 3% 1rem;
-  }
-
-  .subtitle {
-    font-size: 0.95rem;
-  }
-
-  .skills {
-    grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .skill p {
-    font-size: 0.75rem;
-  }
-
-  .historyItem {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .arqItem {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .arqIcon {
+    font-size: 2.5rem;
+  }
+
+  .floatingCircle1,
+  .floatingCircle2,
+  .floatingCircle3 {
+    display: none;
   }
 }

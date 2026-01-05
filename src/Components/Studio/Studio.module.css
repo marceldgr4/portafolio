@@ -1,114 +1,552 @@
 @import "../../vars.css";
 
-.Container {
+/* ====== ANIMACIONES ====== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(88, 101, 242, 0.8);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.236);
-  border-radius: 1rem;
-  padding: 3rem;
-  margin-top: 8rem;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.339);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(12, 20, 40, 0.95) 0%, rgba(26, 42, 78, 0.95) 100%);
+  border-radius: 2rem;
+  padding: 5rem 3rem;
+  margin: 8rem 10% 6rem 10%;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  z-index: 1;
+}
+
+/* Decoración de fondo */
+.backgroundDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(88, 101, 242, 0.3), transparent);
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(114, 137, 218, 0.3), transparent);
+  bottom: 50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.circle3 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+/* ====== HEADER ====== */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.headerDecoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.decorationLine {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.5), transparent);
+  animation: slideInLine 1s ease-out;
+}
+
+.decorationDot {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  border-radius: 50%;
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 
 .title {
   color: var(--color-text);
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #5865f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* ====== CONTENIDO ====== */
 .content {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.studyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ====== TARJETA DE ESTUDIO ====== */
+.studyCard {
+  position: relative;
+  background: linear-gradient(145deg, rgba(26, 42, 78, 0.6), rgba(12, 20, 40, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.studyCard:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.studyCard:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Efecto de brillo */
+.cardGlow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, transparent, rgba(88, 101, 242, 0.5), transparent);
+  border-radius: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  animation: rotateGlow 3s linear infinite;
+}
+
+.studyCard:hover .cardGlow {
+  opacity: 1;
+}
+
+.studyCard:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(88, 101, 242, 0.3);
+  border-color: rgba(88, 101, 242, 0.4);
+}
+
+/* Variantes de color */
+.studyCardblue:hover {
+  border-color: rgba(88, 101, 242, 0.5);
+}
+
+.studyCardpurple:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* ====== BADGE ====== */
+.badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.badgeblue {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.2), rgba(114, 137, 218, 0.2));
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  color: #7289da;
+}
+
+.badgepurple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(167, 139, 250, 0.2));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+}
+
+.studyCard:hover .badge {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+/* ====== ICONO ====== */
+.iconWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.StudioImage {
-  width: 25%;
-  margin-right: 3rem;
+.iconBackground {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.15), rgba(114, 137, 218, 0.15));
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+  transform: rotate(0deg);
 }
 
-.iconos {
-  padding: 1.25rem;
-  width: 9.375rem;
+.studyCard:hover .iconBackground {
+  transform: rotate(10deg) scale(1.1);
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.25), rgba(114, 137, 218, 0.25));
 }
 
-.aboutItems {
-  color: var(--color-text);
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.3));
+}
+
+.studyCard:hover .icon {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* ====== CONTENIDO DE LA TARJETA ====== */
+.cardContent {
+  text-align: center;
+}
+
+.institucion {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.studyCard:hover .institucion {
+  color: #7289da;
+}
+
+.programa {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ====== LISTA DE CURSOS ====== */
+.cursosList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-left: 10%;
+  gap: 1rem;
 }
 
-.aboutItem {
+.curso {
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.75rem;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.studyCardblue .curso {
+  border-left-color: rgba(88, 101, 242, 0.3);
+}
+
+.studyCardpurple .curso {
+  border-left-color: rgba(139, 92, 246, 0.3);
+}
+
+.curso:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-left-color: #7289da;
+  transform: translateX(5px);
+}
+
+.cursoIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
   align-items: center;
-  border-radius: 1.25rem;
-  list-style: none;
-  padding: 3.5rem;
-  background-image: linear-gradient(
-    90deg,
-    rgba(162, 215, 232, 0.42) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  background: linear-gradient(135deg, #5865f2, #7289da);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
 }
 
-.aboutItem:hover {
-  background-size: 100% 100%;
-}
-
-.aboutItem h3 {
-  font-size: 1.5rem;
+/* ====== INDICADOR DE HOVER ====== */
+.hoverIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
-.aboutItem p {
-  font-size: 1.5rem;
+.studyCard:hover .hoverIndicator {
+  opacity: 1;
+  transform: translateY(0);
+  color: #7289da;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.studyCard:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 1024px) {
+  .studyList {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 830px) {
-  .Container {
+  .container {
+    padding: 3rem 2rem;
+    margin: 5rem 5% 4rem 5%;
+    border-radius: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .studyList {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .studyCard {
     padding: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
   }
-  .content {
-    flex-direction: column;
+
+  .iconWrapper {
+    width: 100px;
+    height: 100px;
   }
-  .StudioImage {
-    display: none;
+
+  .icon {
+    width: 70px;
+    height: 70px;
   }
-  .aboutItems {
-    margin-top: 2rem;
-    margin-left: 0;
-  }
-  .aboutItem {
-    padding: 2rem;
+
+  .decorationLine {
+    width: 50px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .title {
-    font-size: 3rem;
+  .container {
+    padding: 2.5rem 1.5rem;
+    margin: 4rem 4% 3rem 4%;
   }
-  .aboutItem h3,
-  .aboutItem p {
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .studyCard {
+    padding: 1.75rem;
+  }
+
+  .badge {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .iconWrapper {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .institucion {
     font-size: 1.2rem;
   }
-}
 
+  .programa {
+    font-size: 1rem;
+  }
+
+  .descripcion,
+  .curso {
+    font-size: 0.9rem;
+  }
+
+  .cursosList {
+    gap: 0.75rem;
+  }
+
+  .curso {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .decorationLine {
+    width: 40px;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3 {
+    display: none;
+  }
+}
