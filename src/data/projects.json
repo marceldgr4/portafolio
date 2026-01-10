@@ -5,7 +5,7 @@
     "title":"Pokedex",
         "imageSrc":"proyect/pokemon.png",
         "description":"Es una aplicación web que permite explorar y visualizar Pokémon de manera interactiva.  ",
-        "skills":["React + vite","Css","JavaScript"],
+        "skills":["React + Vite","CSS","JavaScript"],
         "demo": "https://pokedex-omega-sepia.vercel.app",
         "source":"https://github.com/marceldgr4/Pokedex"
     },
@@ -14,7 +14,7 @@
         "title":"Proyecto Sistema de gestion de inventario",
         "imageSrc": "proyect/icon.png",
         "description":"Sistema de gestión de inventario diseñado para el control de artículos de papelería, comida y decoración. .",
-        "skills":["Apps Script Google","Sheet Google"],
+        "skills":["Apps Script Google","Google Sheets"],
         "demo": "/InvenProject",
         "source":"https://github.com/marceldgr4/App-inventario-5.0.git"
         
