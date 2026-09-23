@@ -8,7 +8,7 @@ export const About = () => {
   const aboutData = [
     {
       id: 1,
-      icon: "about/person.png",
+      icon: "about/usuario.png",
       iconAlt: "personal",
       titulo: "Nivel Personal",
       descripcion: "Me considero una persona curiosa, comprometida, sociable con buena disposición para trabajar en equipo. Disfruto escuchar, proponer ideas y generar un ambiente positivo, sin perder el enfoque en la calidad y el cumplimiento.",
@@ -17,11 +17,11 @@ export const About = () => {
     },
     {
       id: 2,
-      icon: "about/diploma.png",
+      icon: "about/profesional.png",
       iconAlt: "profesional",
       titulo: "Nivel Profesional",
-      descripcion: "Disfruto trabajar en el desarrollo web y móvil, especialmente en la construcción de experiencias intuitivas y funcionales. Tengo experiencia en tecnologías como React, SwiftUI, Spring Boot. Me motiva poder combinar el diseño, la lógica y la arquitectura para entregar productos bien construidos y con una visión clara.",
-      tecnologias: ["React", "SwiftUI", "Spring Boot"],
+      descripcion: "Disfruto desarrollar soluciones Full Stack para aplicaciones web y móviles, participando en todo el proceso, desde la construcción de interfaces y experiencias de usuario hasta la lógica de negocio, APIs y gestión de datos. Tengo experiencia con tecnologías tanto en frontend como en backend. Me interesa construir aplicaciones funcionales, mantenibles y bien estructuradas, combinando desarrollo, arquitectura y buenas prácticas para transformar necesidades reales en soluciones de software.",
+      tecnologias: ["React", "SwiftUI", "Spring Boot", "Java","javaScript", "TypeScript"],
       color: "purple"
     }
   ];

@@ -671,15 +671,28 @@
   box-shadow: 0 20px 40px rgba(34, 197, 94, 0.25);
 }
 
+/* Contenedor e imagen de los iconos de arquitectura ajustados */
 .arqIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
   transition: all 0.4s ease;
 }
 
+.arqIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
 .arqItem:hover .arqIcon {
-  transform: scale(1.2) translateY(-5px);
+  transform: scale(1.15) translateY(-5px);
 }
 
 .arqNombre {
@@ -875,7 +888,8 @@
   }
 
   .arqIcon {
-    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
   }
 
   .floatingCircle1,

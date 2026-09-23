@@ -8,27 +8,58 @@ export const Studio = () => {
   const estudios = [
     {
       id: 1,
-      icon: "studio/univer.png",
+      icon: "studio/university.png",
       iconAlt: "universidad",
       tipo: "UNIVERSITARIO",
       institucion: "Universidad del Magdalena",
       programa: "Ingeniería de Sistemas",
-      descripcion: "Formación integral en desarrollo de software, gestión de proyectos y soluciones tecnológicas.",
+      cursos: ["Formación integral en desarrollo de software y soluciones tecnológicas."],
       color: "blue"
     },
     {
       id: 2,
-      icon: "studio/BD.png",
+      icon: "studio/backend.png",
       iconAlt: "base de datos",
       tipo: "TÉCNICO",
       institucion: "Servicio Nacional de Aprendizaje - SENA",
       programa: "Base de Datos",
       cursos: [
-        "Construcción de Base de datos con MySQL",
+        "Construcción de Base de datos con postegreSQL",
         "Base de datos generalidades y sistema de gestión"
       ],
       color: "purple"
+    },
+
+    {id:3,
+    icon: "studio/java.png",
+    iconAlt: "desarrollo de Java",
+    tipo: "TÉCNICO",
+    institucion: "Servicio Nacional",
+    programa: "Desarrollo de Aplicaciones con Interfaz Gráfica ",
+    cursos: ["Manejo de Eventos, Clases y Objetos: Java"],
+    color: "purple"
+    },
+    {
+      id:4,
+      icon: "studio/devops.png",
+      iconAlt: "devops",
+      tipo: "TÉCNICO",
+      institucion: "Servicio Nacional",
+      programa: "Aplicación del Marco de Trabajo Scrum ",
+      cursos: ["Proyectos de Desarrollo de Software"],
+      color: "purple"
+    },
+    {
+      id: 4,
+      icon: "studio/pruebas.png",
+      iconAlt: "devops",
+      tipo: "TÉCNICO",
+      institucion: "Servicio Nacional",
+      programa: "Manejo de Pruebas de Software ",
+      cursos: ["Proyectos de Desarrollo de Software"],
+      color: "purple"
     }
+
   ];
 
   return (

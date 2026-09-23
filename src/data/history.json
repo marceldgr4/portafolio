@@ -1,5 +1,22 @@
 [
-    
+
+  {
+    "role": "Desarrollador de Software",
+    "organisation": "Periferia-it grup",
+    "startDate": "Feb 2026  ",
+    "endDate": "Sep 2026",
+    "experiences": ["Desarrollo y mantenimiento de la plataforma empresarial Telpe POS utilizando Java. Participé en la implementación de nuevas funcionalidades y servicios, corrección de bugs, mantenimiento evolutivo e integración de componentes. Realicé pruebas funcionales y trabajé con recursos de Microsoft Azure y GitHub bajo un entorno colaborativo de desarrollo."],
+    "imageSrc":"history/images.jpeg"
+  },
+
+  {
+    "role": "Desarrollador de Software",
+    "organisation": "Recuperadora La Mejor J.B. S.A.S.",
+    "startDate": "Ago 2025  ",
+    "endDate": "Ene 2026",
+    "experiences": ["Desarrollo Full Stack de una aplicación web para la gestión y trazabilidad de material reciclado. Implementé la lógica de negocio con Node.js y Express, PostgreSQL como base de datos, módulos CRUD, control de inventario, autenticación por roles, dashboards con KPIs y generación de reportes en PDF y Excel. La solución fue desplegada en Vercel."],
+    "imageSrc":"history/reciclaje.png"
+  },
 
     {
       "role": "Desarrollador  Web",
