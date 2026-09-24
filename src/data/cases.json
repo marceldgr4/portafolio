@@ -1,0 +1,66 @@
+[
+  {
+    "id": "telpe-pos",
+    "company": "Periferia IT Group",
+    "isCurrent": false,
+    "sector": "Software empresarial · Punto de venta",
+    "logo": "history/images.jpeg",
+    "title": "Evolución y mantenimiento de la plataforma Telpe POS",
+    "challenge": "Una plataforma empresarial en producción necesitaba incorporar nuevas funcionalidades y corregir errores sin afectar la operación diaria, trabajando en un entorno colaborativo con varios desarrolladores.",
+    "architecture": [
+      "Desarrollo de nuevos servicios y funcionalidades en Java",
+      "Integración de componentes dentro de la plataforma existente",
+      "Uso de recursos de Microsoft Azure",
+      "Flujo de trabajo colaborativo con GitHub"
+    ],
+    "results": [
+      "Nuevas funcionalidades y servicios entregados",
+      "Corrección de bugs y mantenimiento evolutivo",
+      "Pruebas funcionales antes de cada entrega"
+    ],
+    "stack": ["Java", "Azure", "GitHub"],
+    "link": null
+  },
+  {
+    "id": "recycling-traceability",
+    "company": "Recuperadora La Mejor J.B. S.A.S.",
+    "isCurrent": false,
+    "sector": "Reciclaje · Trazabilidad",
+    "logo": "history/reciclaje.png",
+    "title": "Aplicación web para la gestión y trazabilidad de material reciclado",
+    "challenge": "La empresa necesitaba controlar el inventario y hacer seguimiento del material reciclado, con distintos niveles de acceso según el rol de cada usuario.",
+    "architecture": [
+      "API con Node.js y Express",
+      "PostgreSQL como base de datos relacional",
+      "Módulos CRUD y control de inventario",
+      "Autenticación y autorización por roles"
+    ],
+    "results": [
+      "Dashboards con KPIs para el seguimiento del negocio",
+      "Generación de reportes en PDF y Excel",
+      "Solución desplegada en Vercel"
+    ],
+    "stack": ["Node.js", "Express", "PostgreSQL", "Vercel"],
+    "link": null
+  },
+  {
+    "id": "internal-platforms",
+    "company": "intouchCX 24/7 Colombia",
+    "isCurrent": false,
+    "sector": "BPO · Herramientas internas",
+    "logo": "history/Logo intouchCX.png",
+    "title": "Plataformas web y dashboards para la toma de decisiones",
+    "challenge": "Distintas áreas necesitaban herramientas propias para automatizar procesos y visualizar datos clave sin depender de desarrollos externos.",
+    "architecture": [
+      "Plataformas web internas con Google Apps Script",
+      "Google Sheets como capa de datos",
+      "Dashboards de visualización con Looker Studio"
+    ],
+    "results": [
+      "Plataformas desarrolladas según los requerimientos de cada área",
+      "Datos clave disponibles para la toma de decisiones"
+    ],
+    "stack": ["Apps Script", "Google Sheets", "Looker Studio"],
+    "link": null
+  }
+]

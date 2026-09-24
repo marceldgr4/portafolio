@@ -21,6 +21,48 @@
     max-width: 650px;
 }
 
+.greeting {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: clamp(2.75rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.role {
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-top: 0.25rem;
+    background: linear-gradient(90deg, var(--color-blue), var(--color-violet));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eyebrow {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.description {
+    max-width: 34rem;
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+}
+
 .title {
     font-size: clamp(3rem, 6vw, 7rem);
     font-weight: 900;
@@ -61,7 +103,7 @@
     animation: fadeInLeft 0.8s ease 0.6s backwards;
 }
 
-.description {
+.descriptions {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-family: var(--font-roboto);
     margin-bottom: 2.5rem;
@@ -69,6 +111,42 @@
     color: rgba(255, 255, 255, 0.85);
     animation: fadeInUp 0.8s ease 0.8s backwards;
 }
+
+
+.stats {
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.stat {
+    padding: 0 1.75rem;
+    border-left: 1px solid var(--color-border);
+}
+
+.stat:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-blue);
+}
+
+.statLabel {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
 
 .buttonContainer {
     display: flex;
@@ -312,5 +390,11 @@
 
     .description {
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat {
+        padding: 0 1rem;
     }
 }

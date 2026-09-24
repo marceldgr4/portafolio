@@ -43,10 +43,11 @@
 
 /* ====== CONTENEDOR PRINCIPAL ====== */
 .container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  width: 90%;
+  max-width: 1240px;
+  margin: 4.5rem auto;
   color: var(--color-text);
-  padding: 0 10%;
+  padding: 0 1rem;
   position: relative;
 }
 

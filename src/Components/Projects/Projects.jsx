@@ -1,88 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import projects from "../../data/projects.json";
+import projectsData from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
+import { useLang } from "../../context/LanguageContext";
 import Styles from "./Projects.module.css";
 
 export const Projects = () => {
-  const [filter, setFilter] = useState('all');
+  const { t } = useLang();
+  const projectsList = t.projects?.items || projectsData;
   const [visibleProjects, setVisibleProjects] = useState([]);
 
   useEffect(() => {
-    // Animación de entrada escalonada
-    let isMounted = true;
-    
-    setVisibleProjects([]);
-    projects.forEach((project, index) => {
-      const timeoutId = setTimeout(() => {
-        if (isMounted) {
-          setVisibleProjects(prev => [...prev, project]);
-        }
-      }, index * 100);
-    });
+    setVisibleProjects(projectsList);
+  }, [projectsList]);
 
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  // Obtener todas las tecnologías únicas
-  const allSkills = [...new Set(projects.flatMap(p => p.skills))];
-
-  // Filtrar proyectos
-  const filteredProjects = filter === 'all' 
-    ? visibleProjects 
-    : visibleProjects.filter(p => p.skills.includes(filter));
+  const labels = {
+    viewProject: t.projects?.viewProject || 'Ver Proyecto',
+    demo:        t.projects?.demo        || 'Demo',
+    source:      t.projects?.source      || 'Código',
+  };
 
   return (
-    <section className={Styles.container} id="Projects">
-      {/* Header con animación */}
+    <section className={Styles.container} id="projects-content" aria-labelledby="projects-title">
+      {/* Header */}
       <div className={Styles.header}>
         <div className={Styles.headerContent}>
-          <h1 className={Styles.title}>Proyectos</h1>
+          <h2 id="projects-title" className={Styles.title}>
+            {t.projects?.title || 'Proyectos'}
+          </h2>
           <p className={Styles.subtitle}>
-            Explora mi colección de proyectos y trabajos destacados
+            {t.projects?.subtitle || 'Explora mi colección de proyectos y trabajos destacados'}
           </p>
         </div>
         
         {/* Decoración */}
-        <div className={Styles.headerDecoration}>
-          <div className={Styles.decorationLine}></div>
-          <div className={Styles.decorationDot}></div>
-          <div className={Styles.decorationLine}></div>
+        <div className={Styles.headerDecoration} aria-hidden="true">
+          <div className={Styles.decorationLine} />
+          <div className={Styles.decorationDot} />
+          <div className={Styles.decorationLine} />
         </div>
       </div>
 
-      {/* Filtros opcionales - descomenta si quieres usarlos */}
-      {/* <div className={Styles.filters}>
-        <button 
-          className={`${Styles.filterButton} ${filter === 'all' ? Styles.filterActive : ''}`}
-          onClick={() => setFilter('all')}
-        >
-          Todos
-        </button>
-        {allSkills.slice(0, 5).map((skill, index) => (
-          <button 
-            key={index}
-            className={`${Styles.filterButton} ${filter === skill ? Styles.filterActive : ''}`}
-            onClick={() => setFilter(skill)}
-          >
-            {skill}
-          </button>
-        ))}
-      </div> */}
-
       {/* Grid de proyectos */}
       <div className={Styles.projects}>
-        {filteredProjects.map((project, id) => (
-          <ProjectCard key={id} project={project} />
+        {visibleProjects.map((project, id) => (
+          <ProjectCard key={project.id || id} project={project} labels={labels} />
         ))}
       </div>
 
       {/* Contador de proyectos */}
       <div className={Styles.projectCount}>
-        <span className={Styles.countNumber}>{filteredProjects.length}</span>
+        <span className={Styles.countNumber}>{visibleProjects.length}</span>
         <span className={Styles.countLabel}>
-          {filteredProjects.length === 1 ? 'Proyecto' : 'Proyectos'}
+          {visibleProjects.length === 1
+            ? (t.projects?.project || 'Proyecto')
+            : (t.projects?.projects || 'Proyectos')}
         </span>
       </div>
     </section>

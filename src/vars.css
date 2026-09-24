@@ -1,17 +1,66 @@
 :root {
-  /* Colores */
+  /* ====== COLORES ====== */
   --color-text: #fff;
   --color-primary: #586cbc;
   --color-secondary: #19376b;
   --color-dark: #0b2447;
   --color-bg: #04152d;
 
-  /* Letras */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-blue: #6d8bf5;
+  --color-muted: #94a3b8;
+  --color-violet: #a78bfa;
+
+  /* ====== TIPOGRAFÍA ====== */
   --font-roboto: "Roboto", sans-serif;
 
-  /* Puntos de quiebre para diseño responsivo */
-  --breakpoint-xs: 480px; /* Teléfonos pequeños */
-  --breakpoint-sm: 768px; /* Tablets */
-  --breakpoint-md: 1024px; /* Escritorios pequeños */
-  --breakpoint-lg: 1200px; /* Escritorios grandes */
+  /* Escala tipográfica responsiva */
+  --text-xs:   clamp(0.75rem,  0.9vw,  0.875rem);
+  --text-sm:   clamp(0.875rem, 1vw,    1rem);
+  --text-base: clamp(1rem,     1.1vw,  1.125rem);
+  --text-lg:   clamp(1.1rem,   1.3vw,  1.3rem);
+  --text-xl:   clamp(1.3rem,   1.8vw,  1.75rem);
+  --text-2xl:  clamp(1.75rem,  2.5vw,  2.25rem);
+  --text-3xl:  clamp(2rem,     3vw,    3rem);
+  --text-4xl:  clamp(2.5rem,   4vw,    4.5rem);
+  --text-5xl:  clamp(3rem,     5vw,    5.5rem);
+
+  /* ====== CONTENEDOR GLOBAL ====== */
+  --container-max: 1400px;
+  --container-pad: clamp(1.25rem, 5%, 5rem);
+
+  /* ====== ESPACIADO ====== */
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: clamp(2.5rem, 4vw, 4rem);
+  --space-4xl: clamp(3rem, 5vw, 5rem);
+
+  /* Espaciado entre secciones */
+  --section-gap: clamp(2rem, 4vw, 4rem);
+  /* Padding interno de cada sección */
+  --section-pad-y: clamp(2.5rem, 4vw, 4.5rem);
+  --section-pad-x: clamp(1.5rem, 5%, 5rem);
+
+  /* ====== BORDES Y RADIOS ====== */
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+
+  /* ====== SOMBRAS ====== */
+  --shadow-sm:   0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-md:   0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg:   0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(88, 108, 188, 0.15);
+
+  /* ====== PUNTOS DE QUIEBRE ====== */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
 }

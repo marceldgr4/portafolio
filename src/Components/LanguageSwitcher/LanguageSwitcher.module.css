@@ -1,0 +1,65 @@
+@import "../../vars.css";
+
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 0.25rem 0.5rem;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.switcher:hover {
+  border-color: rgba(88, 108, 188, 0.4);
+  box-shadow: 0 0 12px rgba(88, 108, 188, 0.15);
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0.3rem 0.5rem;
+  border-radius: 1.5rem;
+  transition: color 0.25s ease, background 0.25s ease;
+  line-height: 1;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 2px 8px rgba(88, 108, 188, 0.4);
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+/* Variante mobile — ocupa más espacio para ser más cómodo de tocar */
+.switcherMobile {
+  padding: 0.375rem 0.75rem;
+  gap: 0.25rem;
+}
+
+.switcherMobile .btn {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+}

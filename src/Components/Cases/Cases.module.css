@@ -1,0 +1,286 @@
+@import "../../vars.css";
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLine {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(88, 101, 242, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 25px rgba(88, 101, 242, 0.8); transform: scale(1.15); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(10deg); }
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1240px;
+    margin: 4.5rem auto;
+    color: var(--color-text);
+    background: linear-gradient(135deg, rgba(12, 20, 40, 0.95) 0%, rgba(26, 42, 78, 0.95) 50%, rgba(12, 20, 40, 0.95) 100%);
+    border-radius: 2rem;
+    padding: 4.5rem 3.5rem;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.backgroundElements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floatingCircle1,
+.floatingCircle2,
+.floatingCircle3 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.06;
+    animation: float 12s ease-in-out infinite;
+}
+
+.floatingCircle1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(88, 101, 242, 0.4), transparent);
+    top: -100px;
+    right: -100px;
+}
+
+.floatingCircle2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent);
+    bottom: 100px;
+    left: -50px;
+    animation-delay: 4s;
+}
+
+.floatingCircle3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(114, 137, 218, 0.4), transparent);
+    top: 50%;
+    left: 50%;
+    animation-delay: 8s;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.headerDecoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.decorationLine {
+    height: 2px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent, rgba(88, 101, 242, 0.6), transparent);
+    animation: slideInLine 1s ease-out;
+}
+
+.decorationDot {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #5865f2, #7289da);
+    border-radius: 50%;
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #5865f2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    max-width: 800px;
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.notice {
+    max-width: 800px;
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.cases {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, rgba(26, 42, 78, 0.4), rgba(12, 20, 40, 0.6));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #5865f2, #7289da, #5865f2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(88, 101, 242, 0.4);
+    box-shadow: 0 25px 50px rgba(88, 101, 242, 0.25), 0 0 60px rgba(88, 101, 242, 0.15);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    padding: 0.6rem;
+    object-fit: contain;
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.15), rgba(114, 137, 218, 0.15));
+    border-radius: 1rem;
+    filter: drop-shadow(0 4px 12px rgba(88, 101, 242, 0.4));
+    transition: transform 0.4s ease;
+}
+
+.card:hover .logo {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.companyRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.company {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.card:hover .company {
+    color: #7289da;
+}
+
+.badge {
+    padding: 0.25rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4ade80;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.2));
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 2rem;
+}
+
+.sector {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7289da;
+}
+
+.title {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.sectionLabel {
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.challenge { color: #fbbf24; }
+.architecture { color: #7289da; }
+.results { color: #4ade80; }
+
+.challengeText {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.columns {
+    display: grid;
+}
