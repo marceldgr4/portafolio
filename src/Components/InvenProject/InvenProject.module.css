@@ -12,17 +12,6 @@
   }
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -31,24 +20,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
   }
 }
 
@@ -65,11 +36,55 @@
   min-height: 100vh;
 }
 
+.inner {
+  width: 100%;
+  max-width: var(--section-max);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ====== BOTÓN VOLVER ====== */
+.backLink {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.backLink:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.backLink:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
 /* ====== HEADER ====== */
 .header {
   text-align: center;
-  margin-bottom: 4rem;
   animation: fadeInDown 0.6s ease-out;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #a5b4fc;
+  background: rgba(88, 101, 242, 0.15);
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  border-radius: 2rem;
 }
 
 .title {
@@ -90,142 +105,43 @@
   margin: 0 auto;
 }
 
-/* ====== CONTENIDO PRINCIPAL ====== */
-.mainContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  width: 100%;
-  max-width: 80rem;
-  margin-bottom: 5rem;
-}
-
-/* ====== SHOWCASE DE IMAGEN ====== */
-.imageShowcase {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* ====== SECCIÓN COVERFLOW ====== */
+.coverflowSection {
   animation: fadeInDown 0.6s ease-out 0.2s both;
 }
 
-.imageWrapper {
-  position: relative;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.imageWrapper:hover .navButton {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
-}
-
-.heroImage {
-  width: 100%;
-  display: block;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.imageTransition {
-  opacity: 0;
-  transform: scale(1.05);
-}
-
-/* Overlay de información */
-.imageOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
-  padding: 2rem;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
-}
-
-.overlayTitle {
-  font-size: 1.5rem;
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, #fff, #a8c0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.overlayDescription {
-  font-size: 0.95rem;
-  color: #d1d5db;
-  line-height: 1.5;
+.sectionSubtitle {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: #9ca3af;
+  line-height: 1.6;
 }
 
-/* Botones de navegación */
-.navButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) scale(0.9);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.3s ease;
-  z-index: 10;
+.hint {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
 }
 
-.navButton:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.navButtonLeft {
-  left: 1rem;
-}
-
-.navButtonRight {
-  right: 1rem;
-}
-
-/* Indicadores de progreso */
-.progressIndicators {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.indicator {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.indicator:hover {
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(1.2);
-}
-
-.indicatorActive {
-  width: 3rem;
-  background: #3b82f6;
-}
-
-/* ====== PANEL DE INFORMACIÓN ====== */
-.textBlock {
-  display: flex;
-  flex-direction: column;
+/* ====== GRID DE INFORMACIÓN ====== */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  animation: fadeInRight 0.6s ease-out 0.4s both;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
 }
 
 .infoCard {
@@ -373,6 +289,11 @@
   background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
 
+.exploreButton:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
 .buttonIcon {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
@@ -382,128 +303,22 @@
   transform: translateX(4px);
 }
 
-/* ====== GALERÍA ====== */
-.gallerySection {
-  width: 100%;
-  max-width: 80rem;
-  animation: fadeInUp 0.6s ease-out 0.6s both;
-}
-
-.galleryTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(90deg, #fff, #a8c0ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.galleryGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.cardActive {
-  border: 3px solid #3b82f6;
-  box-shadow: 0 0 2rem rgba(59, 130, 246, 0.5);
-  transform: scale(1.05);
-}
-
-.cardImageWrapper {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-
-.cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .cardImage {
-  transform: scale(1.1);
-}
-
-.cardOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
-  display: flex;
-  align-items: flex-end;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card:hover .cardOverlay,
-.cardActive .cardOverlay {
-  opacity: 1;
-}
-
-.cardBody {
-  padding: 1rem;
-  width: 100%;
-}
-
-.cardBody h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.3;
-}
-
-/* Indicador de activo */
-.activeIndicator {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: #3b82f6;
-  color: white;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(59, 130, 246, 0.5);
-  animation: scaleIn 0.3s ease-out;
-}
-
 /* ====== RESPONSIVE ====== */
-@media (max-width: 1024px) {
-  .mainContent {
+@media (max-width: 1280px) {
+  .infoGrid {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
+}
 
+@media (hover: none) {
+  .hint {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
   .title {
     font-size: 2.5rem;
-  }
-
-  .galleryGrid {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
 }
 
@@ -524,15 +339,8 @@
     grid-template-columns: 1fr;
   }
 
-  .navButton {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
-  }
-
-  .galleryGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .inner {
+    gap: 3rem;
   }
 }
 
@@ -541,16 +349,13 @@
     font-size: 1.75rem;
   }
 
-  .overlayTitle {
-    font-size: 1.2rem;
-  }
-
-  .overlayDescription {
-    font-size: 0.85rem;
-  }
-
   .infoCard,
   .accessCard {
     padding: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
   }
 }

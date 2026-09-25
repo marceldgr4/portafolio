@@ -41,6 +41,76 @@
     z-index: 1;
 }
 
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    list-style: none;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.list li {
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.list li::before {
+    position: absolute;
+    left: 0;
+}
+
+.architectureList li::before { content: '▹'; color: #7289da; }
+.resultsList li::before      { content: '✓'; color: #4ade80; }
+
+.cardFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.chip {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.15), rgba(114, 137, 218, 0.15));
+    border: 1px solid rgba(88, 101, 242, 0.25);
+    border-radius: 1.5rem;
+}
+
+.link {
+    font-weight: 600;
+    color: #7289da;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover { color: #a5b4fc; }
+
+@media (max-width: 600px) {
+    .container { padding: 3rem 1.5rem; }
+    .card      { padding: 1.5rem; }
+}
+
+
 .backgroundElements {
     position: absolute;
     inset: 0;
