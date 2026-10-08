@@ -13,7 +13,7 @@ export const Hero = () => {
   const { t } = useLang()
 
   const STATS = [
-    { value: "2",                   label: t.hero.stats.experience   },
+    { value: "2+",                   label: t.hero.stats.experience   },
     { value: String(companiesCount), label: t.hero.stats.companies    },
     { value: `${skills.length}+`,   label: t.hero.stats.technologies },
   ]
