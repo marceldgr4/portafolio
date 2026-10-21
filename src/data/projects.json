@@ -23,7 +23,7 @@
     {
         "id": "ecommerce-dashboard",
         "title": "Sistema de Ecommerce Dashboard",
-        "imageSrc": "proyect/Ecommerce.png",
+        "imageSrc": "proyect/ecommerce.png",
         "description": "Plataforma full-stack para la gestión de comercio electrónico y análisis de métricas operativas en tiempo real.",
         "skills": ["Spring Boot 3.4", "PostgreSQL 16", "React 18", "Tailwind CSS", "Vite"],
         "demo": "https://ecommerce-dashboard-six-phi.vercel.app/login",
