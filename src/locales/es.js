@@ -317,6 +317,16 @@ const es = {
         imageSrc: "proyect/icon.png",
         isExternal: false,
       },
+      {
+        id: "ecommerce-dashboard",
+        title: "Sistema de Ecommerce Dashboard",
+        description: "Plataforma full-stack para la gestión de comercio electrónico y análisis de métricas operativas en tiempo real.",
+        skills: ["Spring Boot 3.4", "PostgreSQL 16", "React 18", "Tailwind CSS", "Vite"],
+        demo: "https://ecommerce-dashboard-six-phi.vercel.app/login",
+        source: "https://github.com/marceldgr4/ecommerce-dashboard.git",
+        imageSrc: "proyect/ecommerce.png",
+        isExternal: true,
+      },
     ],
   },
 

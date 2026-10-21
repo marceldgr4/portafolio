@@ -317,6 +317,16 @@ const en = {
         imageSrc: "proyect/icon.png",
         isExternal: false,
       },
+      {
+        id: "ecommerce-dashboard",
+        title: "E-Commerce Dashboard System",
+        description: "Full-stack platform for e-commerce operations management and real-time analytical metrics.",
+        skills: ["Spring Boot 3.4", "PostgreSQL 16", "React 18", "Tailwind CSS", "Vite"],
+        demo: "https://ecommerce-dashboard-six-phi.vercel.app/login",
+        source: "https://github.com/marceldgr4/ecommerce-dashboard.git",
+        imageSrc: "proyect/ecommerce.png",
+        isExternal: true,
+      },
     ],
   },
 
