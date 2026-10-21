@@ -324,7 +324,7 @@ const es = {
         skills: ["Spring Boot 3.4", "PostgreSQL 16", "React 18", "Tailwind CSS", "Vite"],
         demo: "https://ecommerce-dashboard-six-phi.vercel.app/login",
         source: "https://github.com/marceldgr4/ecommerce-dashboard.git",
-        imageSrc: "proyect/ecommerce.png",
+        imageSrc: "proyect/eco.png",
         isExternal: true,
       },
     ],
